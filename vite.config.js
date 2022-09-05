@@ -11,10 +11,9 @@ export default defineConfig({
                 'resources/frontend/css/bootstrap.min.css',
                 'resources/frontend/css/fontawesome.css',
                 'resources/frontend/css/owl.css',
-                'resources/frontend/js/jquery/jquery.min.js',
+                'resources/frontend/css/templatemo-digimedia-v1.css',
                 'resources/frontend/js/bootstrap.bundle.min.js',
                 'resources/frontend/js/owl-carousel.js',
-                'resources/frontend/js/imagesloaded.js',
                 'resources/frontend/js/custom.js',
 
             ],

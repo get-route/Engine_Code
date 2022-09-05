@@ -664,10 +664,11 @@
 
         </div>
     </div>
-    @vite([ 'resources/frontend/js/jquery/jquery.min.js',
+    <script src="./public/frontend/js/jquery.min.js"></script>
+    <script src="./public/frontend/js/imagesloaded.js"></script>
+    @vite([
     'resources/frontend/js/bootstrap.bundle.min.js',
     'resources/frontend/js/owl-carousel.js',
-    'resources/frontend/js/imagesloaded.js',
     'resources/frontend/js/custom.js',
     ])
 </footer>
