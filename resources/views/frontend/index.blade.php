@@ -29,50 +29,17 @@
     <div class="preloader-inner">
         <span class="dot"></span>
         <div class="dots">
-            <span></span>
-            <span></span>
-            <span></span>
+
         </div>
     </div>
 </div>
 <!-- ***** Preloader End ***** -->
 
 <!-- ***** Header Area Start ***** -->
-<header class="header-area header-sticky ">
+<header class="header-area header-sticky">
 @yield('menu')
 </header>
 <!-- ***** Header Area End ***** -->
-<div class="main-banner fadeIn" id="top" >
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-lg-6 align-self-center">
-                        <div class="left-content show-up header-text " data-wow-duration="1s" data-wow-delay="1s">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <h2>Найти номер своего двигателя онлайн</h2>
-                                    <p>Наш сервис позволяет Вам определить необходимое расположение, модель и номер двигателя онлайн.</p>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="border-first-button scroll-to-section">
-                                        <a href="#contact">Найти</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="right-image " >
-                            <img src="{{asset('frontend/img/slider-dec.png')}}" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div id="services" class="services section">
     <div class="container">
         <div class="row">
@@ -84,6 +51,7 @@
                 </div>
             </div>
             <div class="col-lg-12">
+
                 <div class="naccs">
                     <div class="grid">
                         <div class="row">
@@ -235,7 +203,6 @@
         </div>
     </div>
 </div>
-
 <div id="about" class="about section">
     <div class="container">
         <div class="row">
@@ -248,9 +215,9 @@
                     </div>
                     <div class="col-lg-6 align-self-center  " >
                         <div class="about-right-content">
-                            <div class="section-heading">
-                                <h6>About Us</h6>
-                                <h4>Who is DigiMedia <em>Agency</em></h4>
+                            <div class="section-heading ">
+                                <h6>Почему именно AiRall?</h6>
+                                <h4>Кому поможет наш <em>сервис</em></h4>
                                 <div class="line-dec"></div>
                             </div>
                             <p>We hope this DigiMedia template is useful for your work. You can use this template for any purpose. You may <a rel="nofollow" href="http://paypal.me/templatemo" target="_blank">contribute a little amount</a> via PayPal to <a href="https://templatemo.com/contact" target="_blank">support TemplateMo</a> in creating new templates regularly.</p>
@@ -318,14 +285,13 @@
     </div>
 </div>
 
-
+<hr class="hr-shadow">
 <div id="portfolio" class="our-portfolio section">
     <div class="container">
         <div class="row">
             <div class="col-lg-5">
                 <div class="section-heading ">
-                    <h6>Our Portofolio</h6>
-                    <h4>See Our Recent <em>Projects</em></h4>
+                    <h4>Модели <em>двигателей</em></h4>
                     <div class="line-dec"></div>
                 </div>
             </div>
@@ -405,18 +371,17 @@
         </div>
     </div>
 </div>
-
+<hr class="hr-shadow">
 <div id="blog" class="blog">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 offset-lg-4 " >
                 <div class="section-heading">
-                    <h6>Recent News</h6>
-                    <h4>Check Our Blog <em>Posts</em></h4>
+                    <h4>Модели <em>автомобилей</em></h4>
                     <div class="line-dec"></div>
                 </div>
             </div>
-            <div class="col-lg-6 show-up fadeInUp" >
+            <div class="col-lg-6 " >
                 <div class="blog-post">
                     <div class="thumb">
                         <a href="#"><img src="{{asset('frontend/img/blog-post-01.jpg')}}" alt=""></a>
@@ -427,8 +392,7 @@
                         <a href="#"><h4>Lorem Ipsum Dolor Sit Amet, Consectetur Adelore
                                 Eiusmod Tempor Incididunt</h4></a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers itii eiumod deis tempor incididunt ut labore.</p>
-                        <span class="author"><img src="{{asset('frontend/img/author-post.jpg')}}" alt="">By: Andrea Mentuzi</span>
-                        <div class="border-first-button"><a href="#">Discover More</a></div>
+
                     </div>
                 </div>
             </div>
@@ -461,19 +425,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            <div class="post-item last-post-item">
-                                <div class="thumb">
-                                    <a href="#"><img src="{{asset('frontend/img/blog-post-04.jpg')}}" alt=""></a>
-                                </div>
-                                <div class="right-content">
-                                    <span class="category">SEO Analysis</span>
-                                    <span class="date">24 September 2021</span>
-                                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -481,8 +433,8 @@
     </div>
 </div>
 
-
-<footer>
+<hr class="hr-shadow">
+<footer class="footer">
 @yield('footer')
     <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
     <script src="{{asset('frontend/js/imagesloaded.js')}}"></script>

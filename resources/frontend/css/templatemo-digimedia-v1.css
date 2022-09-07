@@ -134,7 +134,13 @@ img {
   width: 100%;
   overflow: hidden;
 }
-
+.logo {
+    color: black;
+    font-size: 45px;
+}
+.logo:hover{
+    color: black;
+}
 /*
 ---------------------------------------------
 global styles
@@ -238,17 +244,7 @@ intro
   position: relative;
 }
 
-.intro-banner:after {
-  content: '';
-  background-image: url(/img/slider-left-dec.jpg);
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 0;
-  top: 0px;
-  width: 262px;
-  height: 625px;
-  z-index: 1;
-}
+
 /*
 .intro-banner:before {
   content: '';
@@ -404,7 +400,7 @@ header
 
 .background-header .logo,
 .background-header .main-nav .nav li a {
-  color: #fff;
+  color: #000000;
 }
 
 .background-header .main-nav .nav li:hover a {
@@ -428,7 +424,6 @@ header
 }
 
 .background-header .nav li:last-child a.active:after {
-  background-color: transparent;
 }
 
 .header-area {
@@ -447,7 +442,7 @@ header
 
 .header-area .main-nav {
   min-height: 80px;
-  background: transparent;
+
 }
 
 .header-area .main-nav .logo {
@@ -479,7 +474,6 @@ header
   float: right;
   margin-top: 30px;
   margin-right: 0px;
-  background-color: transparent;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -521,7 +515,7 @@ header
   transition: all 0.3s ease 0s;
   height: 40px;
   line-height: 40px;
-  border: transparent;
+
   letter-spacing: 1px;
 }
 
@@ -697,7 +691,6 @@ header
 .header-area .main-nav .menu-trigger.active span,
 .header-area .main-nav .menu-trigger.active span:before,
 .header-area .main-nav .menu-trigger.active span:after {
-  background-color: transparent;
   width: 100%;
 }
 
@@ -984,53 +977,37 @@ Banner Style
 ---------------------------------------------
 */
 
-.main-banner {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding: 226px 0px 120px 0px;
-  position: relative;
-  overflow: hidden;
-}
-
-
-
-
-
-.main-banner .left-content {
+nner .left-content {
   margin-right: 15px;
 }
 
-.main-banner .left-content h6 {
-  text-transform: capitalize;
+ .left-content h6 {
   font-size: 20px;
   font-weight: 700;
   color: #7f0fba;
-  margin-bottom: 15px;
   text-transform: uppercase;
 }
 
-.main-banner .left-content h2 {
+ .left-content h2 {
   z-index: 2;
   position: relative;
   font-weight: 700;
   font-size: 50px;
   color: #2a2a2a;
-  margin-bottom: 20px;
 }
 
-.main-banner .left-content p {
+ .left-content p {
   margin-bottom: 30px;
   margin-right: 45px;
 }
 
-.main-banner .right-image {
+ .right-image {
   text-align: right;
   position: relative;
   z-index: 20;
 }
 
-.main-banner .right-image img {
+ .right-image img {
   max-width: 593px;
 }
 
@@ -1127,8 +1104,8 @@ About Style
   border-top-right-radius: 75px;
   border-bottom-right-radius: 75px;
   border-left: 0;
-  -webkit-transform-origin: center left;
-  transform-origin: center left;
+  -webkit-transform-origin: center;
+  transform-origin: center;
 }
 .progress .progress-right {
   right: 0;
@@ -1138,8 +1115,8 @@ About Style
   border-top-left-radius: 75px;
   border-bottom-left-radius: 75px;
   border-right: 0;
-  -webkit-transform-origin: center right;
-  transform-origin: center right;
+  -webkit-transform-origin: center;
+  transform-origin: center;
 }
 .progress .progress-value {
   text-align: center;
@@ -1299,13 +1276,14 @@ Services Style
 */
 
 .services {
-  padding-top: 30px;
+
   position: relative;
 }
 
 .services .section-heading {
   text-align: center;
   margin-bottom: 80px;
+    padding-top: 120px;
 }
 
 .services .section-heading .line-dec {
@@ -1916,13 +1894,10 @@ footer {
 footer p {
   text-align: center;
   margin: 20px 0px;
-  color: #fff;
+  color: #000000;
 }
 
-footer p a {
-  color: #fff;
-  transition: all .5s;
-}
+
 
 /*
 ---------------------------------------------
@@ -1953,17 +1928,10 @@ responsive
   .header-area .main-nav .logo h4 {
     font-size: 20px;
   }
-  .main-banner .left-content {
+   .left-content {
     margin-right: 0px;
   }
-  .main-banner {
-    text-align: center;
-    padding: 226px 0px 30px 0px;
-  }
-  .main-banner:before {
-    display: none;
-  }
-  .main-banner .right-image {
+   .right-image {
     margin: 30px auto 0px auto;
     text-align: center;
   }
@@ -2023,7 +1991,7 @@ responsive
     max-width: 30px;
     margin-left: 5px;
   }
-  .main-banner .info-stat {
+   .info-stat {
     margin-bottom: 15px;
   }
   .service-item {
@@ -2095,4 +2063,8 @@ responsive
   form#contact {
     padding: 30px;
   }
+}
+.fixed-top ul{
+    background-color: #e5e5e5;
+    border-radius: 60px;
 }

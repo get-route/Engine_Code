@@ -1,13 +1,14 @@
 @section('menu')
-<div class="container">
+<div class="container fixed-top">
     <div class="row">
         <div class="col-12">
-            <nav class="main-nav">
+            <nav class="main-nav" >
                 <!-- ***** Logo Start ***** -->
-                <a href="index.html" class="logo">
-                    <img src="{{asset('frontend/img/logo.png')}}" alt="логотип сайта airall.ru">
+                <a href="/" class="logo">
+                    <font color="#7f0fba">ᗩᎥ</font>Rall.Ru
                 </a>
                 <!-- ***** Logo End ***** -->
+
                 <!-- ***** Menu Start ***** -->
                 <ul class="nav">
                     <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
