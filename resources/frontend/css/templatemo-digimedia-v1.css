@@ -506,7 +506,7 @@ header
 .header-area .main-nav .nav li a {
   display: block;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 20px;
   color: #2a2a2a;
   text-transform: capitalize;
   -webkit-transition: all 0.3s ease 0s;
@@ -1336,7 +1336,7 @@ Services Style
 .services .naccs .menu div .thumb {
   display: inline-block;
   width: 100%;
-  padding: 30px 0px;
+  padding: 10px 10px 10px 10px;
   background-color: #fff;
 }
 
@@ -1495,7 +1495,9 @@ Free Quote
 Portfolio
 ---------------------------------------------
 */
-
+.thumb img{
+    padding: 2px 2px 2px 2px;
+}
 .our-portfolio {
   padding-top: 30px;
   overflow: hidden;
@@ -1734,149 +1736,35 @@ Blog
   margin-bottom: 20px;
   line-height: 30px;
 }
+.service-menu button{
+    padding: 30px 30px 30px 30px;
+}
+.service-menu button:focus{
+    border: 4px solid #f7f7f7;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: #f7f7f7;
+}
+.service-menu p{
+    font-size: 25px;
+    color: black;
+    font-weight: 700;
+}
+.service-menu img{
+    width: 100px;
+    height: auto;
+}
+.service-menu-item{
 
-
-/*
----------------------------------------------
-contact
----------------------------------------------
-*/
-
-.contact-us {
-  padding-top: 30px;
+}
+.service-menu-item button{
+    border: none;
+    background: #fff;
+}
+.service-menu-item {
+    margin-bottom: 20px;
 }
 
-.contact-us .section-heading .line-dec {
-  margin: 0 auto;
-}
-
-.contact-us .section-heading {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-
-
-.contact-dec img {
-  max-width: 224px;
-  position: absolute;
-  right: 25px;
-  top: -242px;
-}
-
-
-
-form#contact {
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
-  position: relative;
-  background-color: #fff;
-  border-radius: 23px;
-  text-align: center;
-}
-
-form#contact #map iframe {
-  border-top-left-radius: 23px;
-  border-bottom-left-radius: 23px;
-  margin-bottom: -7px;
-  position: relative;
-  z-index: 2;
-}
-
-.fill-form {
-  padding: 80px 60px 80px 30px;
-}
-
-.fill-form .info-post {
-  margin-bottom: 20px;
-}
-
-.fill-form .icon {
-  text-align: center;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
-  border-radius: 23px;
-  padding: 25px 15px;
-}
-
-.fill-form .icon img {
-  max-width: 60px;
-  display: block;
-  margin: 0 auto;
-}
-
-.fill-form .icon a {
-  margin-top: 15px;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: 500;
-  color: #2a2a2a;
-  transition: all .3s;
-}
-
-.fill-form .icon:hover a {
-  color: #7f0fba;
-}
-
-form#contact input {
-  width: 100%;
-  height: 46px;
-  background-color: transparent;
-  border: 1px solid #eee;
-  outline: none;
-  font-size: 15px;
-  font-weight: 300;
-  color: #2a2a2a;
-  padding: 0px 20px;
-  border-radius: 23px;
-  margin-top: 30px;
-}
-
-form#contact input::placeholder {
-  color: #aaa;
-}
-
-form#contact textarea {
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  max-height: 200px;
-  min-height: 200px;
-  height: 200px;
-  border-radius: 23px;
-  background-color: transparent;
-  border: 1px solid #eee;
-  outline: none;
-  font-size: 15px;
-  font-weight: 300;
-  color: #2a2a2a;
-  padding: 15px 20px;
-  margin-top: 30px;
-}
-
-form#contact textarea::placeholder {
-  color: #aaa;
-}
-
-form#contact button {
-  display: inline-block;
-  background-color: #fff;
-  font-size: 15px;
-  font-weight: 400;
-  color: #7f0fba;
-  margin-top: 30px;
-  width: 100%;
-  text-transform: capitalize;
-  padding: 12px 25px;
-  border-radius: 23px;
-  letter-spacing: 0.25px;
-  border: 1px solid #7f0fba;
-  transition: all .3s;
-  outline: none;
-}
-
-form#contact button:hover {
-  background-color: #7f0fba!important;
-  color: #fff!important;
-}
 
 /*
 ---------------------------------------------
@@ -2006,7 +1894,7 @@ responsive
   .service-item .right-content {
     display: inline-block;
   }
-  .services .naccs .menu div .thumb {
+  .services .naccs .menu div  {
     padding: 5px;
   }
   .services .icon img {
@@ -2015,7 +1903,7 @@ responsive
   .services ul.nacc li.active {
     padding: 45px;
   }
-  .services .naccs .menu div  {
+  .services .naccs  div  {
     font-size: 0px;
   }
   .services ul.nacc li .right-image img {
@@ -2052,7 +1940,7 @@ responsive
     margin-bottom: 30px;
   }
   .post-item .thumb img {
-    max-width: 140px;
+    max-width: 100px;
   }
   .post-item .right-content p {
     display: none;
@@ -2065,6 +1953,7 @@ responsive
   }
 }
 .fixed-top ul{
-    background-color: #e5e5e5;
+    background-color: #ffffff;
+    opacity: 90%;
     border-radius: 60px;
 }

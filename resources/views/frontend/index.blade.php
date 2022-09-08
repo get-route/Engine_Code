@@ -44,160 +44,69 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="section-heading " >
-                    <h4>Найти номер <em>двигателя</em> онлайн</h4>
-                    <p>Выберите критерии по которых хотели бы узнать номер своего двигателя</p>
+                <div class="section-heading ">
+                    <h4>Найти где номер <em>двигателя</em> онлайн</h4>
+                    <p>Выберите критерии поиска по по которых хотели бы узнать расположение идентификационных данных</p>
                     <div class="line-dec"></div>
                 </div>
             </div>
             <div class="col-lg-12">
 
-                <div class="naccs">
-                    <div class="grid">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="menu">
-                                    <div>
-                                        <div class="thumb active">
-                                            <span class="icon"><img src="{{asset('frontend/img/service-icon-03.png')}}" alt=""></span>
-                                            По автомобилю
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="thumb">
-                                            <span class="icon"><img src="{{asset('frontend/img/service-icon-04.png')}}" alt=""></span>
-                                            По марке
-                                        </div>
-                                    </div>
-                                    <div class="last-thumb">
-                                        <div class="thumb">
-                                            <span class="icon"><img src="{{asset('frontend/img/service-icon-01.png')}}" alt=""></span>
-                                            По вин коду
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="container">
+
+                        <div class="row service-menu text-center">
+                            <h3 class="col-lg-4 service-menu-item" id="flush-headingOne">
+                                <button type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                    <img src="{{asset('frontend/img/service-icon-03.png')}}" alt="номер двигателя по автомобилю">
+                                    <p>По автомобилю</p>
+                                </button>
+                            </h3>
+                            <h3 class="col-lg-4 service-menu-item" id="flush-headingTwo">
+                                <button class="collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                    <img src="{{asset('frontend/img/service-icon-04.png')}}" alt="номер двигателя по модели силового агрегата">
+                                    <p>По марке</p>
+                                </button>
+                            </h3>
+                            <h3 class="col-lg-4 service-menu-item" id="flush-headingThree">
+                                <button class=" collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                    <img src="{{asset('frontend/img/service-icon-01.png')}}" alt="найти номер двигателя по вин коду авто">
+                                   <p> По вин коду</p>
+                                </button>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                             aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                1
                             </div>
-                            <div class="col-lg-12">
-                                <ul class="nacc">
-                                    <li class="active">
-                                        <div>
-                                            <div class="thumb">
-                                                <div class="row">
-                                                    <div class="col-lg-6 align-self-center">
-                                                        <div class="left-text">
-                                                            <h4>SEO Analysis &amp; Daily Reports</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
-                                                                dover lipsum lorem and the others.</p>
-                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                                                <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 align-self-center">
-                                                        <div class="right-image">
-                                                            <img src="{{asset('frontend/img/services-image.jpg')}}" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <div class="thumb">
-                                                <div class="row">
-                                                    <div class="col-lg-6 align-self-center">
-                                                        <div class="left-text">
-                                                            <h4>Healthy Food &amp; Life</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
-                                                                dover lipsum lorem and the others.</p>
-                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                                                <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 align-self-center">
-                                                        <div class="right-image">
-                                                            <img src="{{asset('frontend/img/services-image-02.jpg')}}" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <div class="thumb">
-                                                <div class="row">
-                                                    <div class="col-lg-6 align-self-center">
-                                                        <div class="left-text">
-                                                            <h4>Car Re-search &amp; Transport</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
-                                                                dover lipsum lorem and the others.</p>
-                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                                                <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 align-self-center">
-                                                        <div class="right-image">
-                                                            <img src="{{asset('frontend/img/services-image-03.jpg')}}" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <div class="thumb">
-                                                <div class="row">
-                                                    <div class="col-lg-6 align-self-center">
-                                                        <div class="left-text">
-                                                            <h4>Online Shopping &amp; Tracking ID</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
-                                                                dover lipsum lorem and the others.</p>
-                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                                                <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 align-self-center">
-                                                        <div class="right-image">
-                                                            <img src="{{asset('frontend/img/services-image-04.jpg')}}" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <div class="thumb">
-                                                <div class="row">
-                                                    <div class="col-lg-6 align-self-center">
-                                                        <div class="left-text">
-                                                            <h4>Enjoy &amp; Travel</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
-                                                                dover lipsum lorem and the others.</p>
-                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                                                <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 align-self-center">
-                                                        <div class="right-image">
-                                                            <img src="{{asset('frontend/img/services-image.jpg')}}" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                        </div>
+
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                             aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                2
+                            </div>
+                        </div>
+
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                             aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                3
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
