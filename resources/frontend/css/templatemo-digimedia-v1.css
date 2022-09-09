@@ -1028,8 +1028,8 @@ About Style
 }
 
 .about-right-content p {
-  margin-top: 30px;
-  margin-bottom: 45px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .skills-content {
@@ -1660,7 +1660,6 @@ Blog
   font-weight: 700;
   color: #2a2a2a;
   margin-top: 20px;
-  margin-bottom: 20px;
   line-height: 30px;
 }
 
@@ -1707,6 +1706,18 @@ Blog
   display: inline-block;
 }
 
+.post-item-footer img {
+    border-radius: 13px;
+    display: inline-block;
+    width: 200px;
+    height: auto;
+}
+.post-item-footer h4{
+    font-size: 15px;
+}
+.footer-ui{
+    text-decoration: none;
+}
 .post-item .right-content {
   padding-top: 20px;
 }
@@ -1745,7 +1756,7 @@ Blog
     background: #ffffff;
     box-shadow: #f7f7f7;
 }
-.service-menu p{
+.service-menu h3{
     font-size: 25px;
     color: black;
     font-weight: 700;
@@ -1776,7 +1787,7 @@ footer {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 130px;
+  margin-top: 10px;
 }
 
 footer p {
