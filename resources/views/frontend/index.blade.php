@@ -56,30 +56,34 @@
                     <div class="container">
 
                         <div class="row service-menu text-center">
-                            <h3 class="col-lg-4 service-menu-item" id="flush-headingOne">
-                                <button type="button" data-bs-toggle="collapse"
+                            <div class="col-lg-4 service-menu-item" id="flush-headingOne">
+                                <button  type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseOne" aria-expanded="false"
                                         aria-controls="flush-collapseOne">
-                                    <img src="{{asset('frontend/img/service-icon-03.png')}}" alt="номер двигателя по автомобилю">
-                                    <h3>По автомобилю</h3>
+                                    <a href="#auto">   <img src="{{asset('frontend/img/service-icon-03.png')}}" alt="номер двигателя по автомобилю">
+                                    <h3>По автомобилю</h3></a>
                                 </button>
-                            </h3>
-                            <h3 class="col-lg-4 service-menu-item" id="flush-headingTwo">
+                            </div>
+                            <div class="col-lg-4 service-menu-item" id="flush-headingTwo">
                                 <button class="collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseTwo" aria-expanded="false"
                                         aria-controls="flush-collapseTwo">
+                                    <a href="#model-engine">
                                     <img src="{{asset('frontend/img/service-icon-04.png')}}" alt="номер двигателя по модели силового агрегата">
                                     <h3>По марке</h3>
+                                        </a>
                                 </button>
-                            </h3>
-                            <h3 class="col-lg-4 service-menu-item" id="flush-headingThree">
+                            </div>
+                            <div class="col-lg-4 service-menu-item" id="flush-headingThree">
                                 <button class=" collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseThree" aria-expanded="false"
                                         aria-controls="flush-collapseThree">
+                                    <a href="#vin-code">
                                     <img src="{{asset('frontend/img/service-icon-01.png')}}" alt="найти номер двигателя по вин коду авто">
                                    <h3> По вин коду</h3>
+                                    </a>
                                 </button>
-                            </h3>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-12 text-center">
@@ -95,7 +99,7 @@
                                             <div class="ticks-list"><span><i class="fa fa-check"></i> Характеристики авто</span>
                                                 <span><i class="fa fa-check"></i> Мощность и модель двигателя</span> <span><i
                                                         class="fa fa-check"></i> Расположение номера</span>
-                                                    <span><i class="fa fa-check"></i> Подробную характеристику автомобиля</span> </div>
+                                                    <span id="auto"><i class="fa fa-check"></i> Подробную характеристику автомобиля</span> </div>
 
 
                                         </div>
@@ -121,7 +125,7 @@
                                             <div class="ticks-list"><span><i class="fa fa-check"></i> Мощности силового агрегата</span>
                                                 <span><i class="fa fa-check"></i> Допустимой нагрузки</span> <span><i
                                                         class="fa fa-check"></i> Параметров диагностики</span>
-                                                <span><i class="fa fa-check"></i> Отзывов автовладельцев</span> </div>
+                                                <span id="model-engine"><i class="fa fa-check"></i> Отзывов автовладельцев</span> </div>
 
 
                                         </div>
@@ -147,7 +151,7 @@
                                             <div class="ticks-list"><span><i class="fa fa-check"></i>Страна производства</span>
                                                 <span><i class="fa fa-check"></i> Год выпуска</span> <span><i
                                                         class="fa fa-check"></i>Каталожная модель</span>
-                                                <span><i class="fa fa-check"></i>Характеристика автомобиля</span> </div>
+                                                <span id="vin-code"><i class="fa fa-check"></i>Характеристика автомобиля</span> </div>
 
 
                                         </div>
