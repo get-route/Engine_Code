@@ -57,10 +57,10 @@
 
                         <div class="row service-menu text-center">
                             <div class="col-lg-4 service-menu-item" id="flush-headingOne">
-                                <button  type="button" data-bs-toggle="collapse"
+                                <button type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                        aria-controls="flush-collapseOne">
-                                    <a href="#auto">   <img src="{{asset('frontend/img/service-icon-03.png')}}" alt="номер двигателя по автомобилю">
+                                        aria-controls="flush-collapseOne" >
+                                    <a href="#auto"> <img src="{{asset('frontend/img/service-icon-03.png')}}" alt="номер двигателя по автомобилю">
                                     <h3>По автомобилю</h3></a>
                                 </button>
                             </div>
