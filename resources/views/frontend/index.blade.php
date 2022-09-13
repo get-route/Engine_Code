@@ -1,25 +1,13 @@
+@section('title','Тут будет заголовок главной страницы')
+@section('description','Описание для гл.страницы')
 @include('frontend.layout.menu')
 @include('frontend.layout.footer')
-<!DOCTYPE html>
-<html lang="en">
+@include('frontend.layout.head')
+    <!DOCTYPE html>
+<html lang="ru">
 
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Сайт по поиску номеров двигателей">
-    <meta name="author" content="">
-    <link rel="icon" type="image/png" href="{{asset('frontend/img/favicon.png')}}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    @vite(['resources/frontend/css/bootstrap.min.css',
-    'resources/frontend/css/fontawesome.css',
-    'resources/frontend/css/templatemo-digimedia-v1.css',
-    'resources/frontend/css/owl.css',
-    ])
-    <title>Где находится номер двигателя: поиск, расположение, посмотреть</title>
-
+    @yield('head')
 </head>
 
 <body>
@@ -45,7 +33,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-heading ">
-                    <h4>Найти где номер <em>двигателя</em> онлайн</h4>
+                    <h1>Найти где номер <em>двигателя</em> онлайн</h1>
                     <p>Выберите критерии поиска по по которых хотели бы узнать расположение идентификационных данных</p>
                     <div class="line-dec"></div>
                 </div>
