@@ -30,7 +30,7 @@
             </div>
             <div class="col-lg-12 text-center">
                 <h1 class="text-center">Двигатель Nan - расположение номера и модель</h1>
-                <p class="text-right">Публикация от: 20.12.2012</p>
+                <p class="text-right">Публикация от :  20.12.2012</p>
             </div>
 
 
@@ -47,33 +47,51 @@
                 <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="./#video">Видео</a> </div>
                 <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="./#comments">Комментарии</a> </div>
             </div>
+            <div class="col-lg-12">
+                <img src="{{asset('frontend/img/engine-default.jpg')}}" class="img_engine" alt="">
+            </div>
         </div>
-        <div class="col-lg-8">
-            <p>Количество цилиндров в блоке:L4</p>
-            <p>Объем мотора: 1997 Cm3 (кубов)</p>
-            <p>Серийная мощность:66 Kw (Киловатт/час) @ 4000 (оборотов/мин)/90Л.С @ 4000 (оборотов/мин)/89 Л.С (без учета потерь) @ 4000 (об/мин)</p>
-            <p>крут/моменту:152 Lb-Футов (ед силы фут/фунт) @ 1900 (оборотов/мин)/206 Nm (Ньютон/метр) @ 1900 (об/мин)</p>
-            <p>Тип топлива:Дизель (ДТ)</p>
-            <p>Объем бака (вместимость):17.2 Галлона (3.7л) (65.1 в литрах)</p>
-            <p>Максимальная скорость:108.7 Mph (миль/ч) (175 Км/ч)</p>
-            <p>Ускорение 0-62 Mph (миль/ч) (0-100 Км/ч):15 S</p>
-            <p>Привод (Тип):Перед Wheel Drive</p>
-            <p>КПП:5ти ступ механика</p>
-            <p>Перед:Вентилируемые тормозные диски</p>
-            <p>Сзади:Диски</p>
-            <p>Размерность:205/60Hr15</p>
-            <p>Размеры колеи:58.7/57.5 дюйма (1/491/1/461 мм)</p>
-            <p>Колесная база (+/- дорожный просвет):107.9 дюйма (2741 мм)</p>
-            <p>Клиренс:6.3 дюйма (160 мм)</p>
-            <p>Обьем багажника:16.9 Cuft (Куб/Фут) (479 в литрах)</p>
-            <p>Пустой (порожняком):2943.2 Фунтов (1335 Кг)</p>
-            <p>Максимальная грузоподъемность:4332 Фунтов (1965 Кг)</p>
-            <p>Аэродинамика (Задняя сторона):0.33</p>
-            <p>Расход по городу:30.9 Миль/Галлон (7.6 Литров/100Км)</p>
-            <p>Расход по трассе:49 Миль/Галлон (4.8 Литров/100Км)</p>
-            <p>Расход при комбинированной езде:40.6 Миль/Галлон (5.8 Литров/100Км)</p>
-            <p>Сo2 (Выбросы):155 Гр/Км</p>
+<div class="col-lg-8">dd</div>
         </div>
+    </div>
+</section>
+<section class="characteristic">
+    <div class="container">
+        <div class="col-lg-12 text-center">
+            <h2 id="/modeng"> Параметры двигателя NAN</h2>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-8 table-character">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <img src="{{asset('frontend/img/email-icon.png')}}" class="img_char" alt="колич цилиндр NAN">
+                    </div>
+                    <div class="col-lg-10">
+                        <p>Количество цилиндров в блоке : L4</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <img src="{{asset('frontend/img/email-icon.png')}}" class="img_char" alt="колич цилиндр NAN">
+                    </div>
+                    <div class="col-lg-10"><p>Количество цилиндров в блоке : L4</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <img src="{{asset('frontend/img/email-icon.png')}}" class="img_char" alt="колич цилиндр NAN">
+                    </div>
+                    <div class="col-lg-10">
+                        <p>Объем мотора : 1997 Cm3 (кубов)</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <img src="{{asset('frontend/img/email-icon.png')}}" class="img_char" alt="колич цилиндр NAN">
+                    </div>
+                    <div class="col-lg-10">
+                        <p>Серийная мощность : 66 Kw (Киловатт/час) @ 4000 (оборотов/мин)/90Л.С @ 4000 (оборотов/мин)/89
+                            Л.С (без учета потерь) @ 4000 (об/мин)</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4"></div>
         </div>
     </div>
 </section>

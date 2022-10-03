@@ -868,6 +868,22 @@ header
     display: flex !important;
   }
 }
+.img_engine{
+    width: 300px;
+    height: auto;
+}
+.img_char{
+    width: 30px;
+    height: auto;
+}
+.table-character p{
+    color: black;
+    font-size: 16px;
+}
+.table-character p:hover{
+    background-color: #e5eef1;
+    border-radius: 15px;
+}
 
 /*
 ---------------------------------------------
