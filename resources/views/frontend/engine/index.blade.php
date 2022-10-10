@@ -26,7 +26,6 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Главная</a></li>
                         <li class="breadcrumb-item"><a href="#">Номер двигателя 753</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Опель Астра</li>
                     </ol>
                 </nav>
             </div>

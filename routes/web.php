@@ -13,11 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+Route::get('/','App\Http\Controllers\EngineController@index')->name('index');
+
+Route::resource('/boss_panel','App\Http\Controllers\Admin\AdminIndexController');
 Route::resource('/engine','App\Http\Controllers\EngineController');
 Route::resource('/model','App\Http\Controllers\ModelController');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
