@@ -39,7 +39,9 @@
                 </div>
             </div>
             <div class="col-lg-12">
+<div id="app">
 
+</div>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="container">
 
@@ -343,12 +345,6 @@
 @yield('footer')
     <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
     <script src="{{asset('frontend/js/imagesloaded.js')}}"></script>
-
-    @vite([
-    'resources/frontend/js/bootstrap.bundle.min.js',
-    'resources/frontend/js/owl-carousel.js',
-    'resources/frontend/js/custom.js',
-    ])
 </footer>
 
 </body>

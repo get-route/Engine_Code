@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class EngineController extends Controller
+class EnginesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,8 @@ class EngineController extends Controller
      */
     public function index()
     {
-        return view('frontend.index');
+        $engines_data =  DB::table('engines')->paginate(40);
+        return view('admin.Engines.index',compact('engines_data'));
     }
 
     /**

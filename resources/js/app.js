@@ -13,10 +13,13 @@ import { createApp } from 'vue';
  * to use in your application's views. An example is included for you.
  */
 
-const app = createApp({});
+const app = createApp({
+});
 
 import ExampleComponent from './components/ExampleComponent.vue';
+import AdminComponent from "./components/admin/AdminComponent.vue";
 app.component('example-component', ExampleComponent);
+app.component('admin-component',AdminComponent)
 
 /**
  * The following block of code may be used to automatically register your
