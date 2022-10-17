@@ -1,13 +1,16 @@
 <template>
     <!-- /.card-header -->
-    <div class="card-body">
-        <table class="table table-bordered table-striped">
+    <div class="col-lg-12 text-center text-success h2">
+        {{this.message}}
+    </div>
+        <table class="table">
+
             <thead>
+
             <tr>
-                <th>#id</th>
-                <th>Название</th>
-                <th>Характеристики</th>
-                <th>Публикация</th>
+                <th scope="col">#id</th>
+                <th scope="col">Название</th>
+                <th scope="col">Характеристики</th>
             </tr>
             </thead>
             <tbody>
@@ -16,15 +19,13 @@
                 <td>{{auto_data.id}}</td>
                 <td>{{auto_data.name}}</td>
                 <td>{{auto_data.specs}}</td>
-                <td>{{auto_data.updated_at}}</td>
-                <td><button @click="isEdit(auto_data.id,auto_data.id, auto_data.name, auto_data.specs, auto_data.updated_at)" class="btn-primary">Редактировать</button></td>
+                <td><button @click="isEdit(auto_data.id,auto_data.id, auto_data.name, auto_data.specs, auto_data.automobile_id)" class="btn-primary">Редактировать</button></td>
             </tr>
               <tr :class="displayOn(auto_data.id) ? '' : 'd-none'">
                 <td><input type="text" v-model="id" class="form-control"></td>
                 <td><input type="text" v-model="name" class="form-control"></td>
                   <td><textarea type="text"  v-model="specs" class="form-control w-100" >{{auto_data.specs}}</textarea></td>
-                <td><input type="text" v-model="updated_at" class="form-control"></td>
-                <td><button class="btn-primary">Обновить</button></td>
+                <td><button class="btn-primary" @click="updateEngine(auto_data.id)">Обновить</button></td>
             </tr>
             </template>
             </tbody>
@@ -48,10 +49,9 @@
                 </template>
             </pagination>
         </div>
-    </div>
+
     <!-- /.card-body -->
 </template>
-
 <script>
     export default {
 
@@ -64,7 +64,8 @@
                id: null,
                name : null,
                specs: null,
-               updated_at: null
+               automobile_id:null,
+               message: null
                }
            }
        ,
@@ -78,17 +79,20 @@
                })
 
            },
-           updateEngine(){
-               axios.get('/api/boss_panel/engines?page=' + page).then(res => {
-                   this.autoin = res.data;
+           updateEngine(id){
+               this.edit = null
+               axios.patch('/api/boss_panel/engines/' + id,{name: this.name, specs: this.specs, automobile_id:this.automobile_id}).then(res => {
+                  console.log(res)
+                   this.AllAuto()
+                   this.message ='Запись ("'+this.name+'")успешно обновлена'
                })
            },
-           isEdit(id, ident,name, specs, updated_at){
+           isEdit(id, ident,name, specs,automobile_id){
                this.edit = id
                this.id = id
                this.name = name
                this.specs = specs
-               this.updated_at = updated_at
+               this.automobile_id = automobile_id
 
            },
            displayOn(id){

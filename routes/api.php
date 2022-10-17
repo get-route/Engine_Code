@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::group(['prefix'=>'boss_panel'],function (){
     Route::get('/engines','App\Http\Controllers\Admin\EnginesController@data_table');
-    Route::patch('/{engines}','App\Http\Controllers\Admin\EnginesController@data_table');
+    Route::patch('/engines/{engines}','App\Http\Controllers\Admin\EnginesController@update_engine');
 });
 
 
