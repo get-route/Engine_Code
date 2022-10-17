@@ -18,9 +18,14 @@ const app = createApp({
 
 import ExampleComponent from './components/ExampleComponent.vue';
 import AdminComponent from "./components/admin/AdminComponent.vue";
-app.component('example-component', ExampleComponent);
-app.component('admin-component',AdminComponent)
+import EnginesComponent from "./components/admin/engines/EnginesComponent.vue";
+import LaravelVuePagination from 'laravel-vue-pagination';
 
+
+app.component('example-component', ExampleComponent);
+app.component('admin-component',AdminComponent);
+app.component('eng-component', EnginesComponent);
+app.component('pagination', LaravelVuePagination)
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

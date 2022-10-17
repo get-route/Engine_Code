@@ -39,13 +39,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{route('auto.index')}}" class="nav-link">
+                                <a href="" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>ВСЕ МОДЕЛИ</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('auto.create')}}" class="nav-link">
+                                <a href="" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Добавить новый</p>
                                 </a>
@@ -67,12 +67,6 @@
                                 <a href="{{route('engines.index')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>ВСЕ ДВИГАТЕЛИ</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{route('engines.create')}}" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Добавить новый</p>
                                 </a>
                             </li>
 

@@ -1,6 +1,6 @@
 @include('admin.layout.footer')
 @include('admin.layout.sidebar')
-@section('title','Список всех двигателей')
+@section('title','Таблица с двигателями автомобилей')
 @include('admin.layout.header')
     <!DOCTYPE html>
 <html lang="en">
@@ -43,54 +43,17 @@
 <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-
         <!-- Main content -->
         <div class="content">
-            <div class="container-fluid" id="app">
+            <div class="container">
                 <!-- /.row -->
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">DataTable with default features</h3>
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($engines_data as $engine)
-                                <tr>
-                                    <td>{{$engine->name}}</td>
-                                    <td>{{$engine->id}}
-                                    </td>
-                                    <td>Win 95+</td>
-                                    <td> 4</td>
-                                    <td>X</td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                            <tfoot>
-                            <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
-                            </tr>
-                            </tfoot>
-                        </table>
-                        {{$engines_data->links()}}
-                    </div>
-                    <!-- /.card-body -->
-                </div>
 
+                <div class="card-header">
+                    <h3 class="card-title">DataTable with default features</h3>
+                </div>
+                <div id="app">
+                    <eng-component></eng-component>
+                </div>
             </div>
             <!-- /.container-fluid -->
         </div>
@@ -104,3 +67,5 @@
 
 </body>
 </html>
+
+
