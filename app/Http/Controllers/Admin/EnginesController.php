@@ -22,6 +22,7 @@ class EnginesController extends Controller
     //Обновление отдельной записи в Двигателях
     public function update_engine(UpdateRequest $request, Engine $engines){
         $data = $request->validated();
+        //return $data;
         $update_engine = DB::table('engines')-> where('id',$engines->id)->update($data);
       return $update_engine;
     }

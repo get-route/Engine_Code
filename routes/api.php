@@ -19,8 +19,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::group(['prefix'=>'boss_panel'],function (){
+    Route::get('/auto','App\Http\Controllers\Admin\AutoModelController@data_auto');
+    Route::patch('/auto/{auto}','App\Http\Controllers\Admin\AutoModelController@update_auto');
     Route::get('/engines','App\Http\Controllers\Admin\EnginesController@data_table');
     Route::patch('/engines/{engines}','App\Http\Controllers\Admin\EnginesController@update_engine');
+
 });
 
 

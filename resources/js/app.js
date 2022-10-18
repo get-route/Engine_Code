@@ -16,15 +16,16 @@ import { createApp } from 'vue';
 const app = createApp({
 });
 
-import ExampleComponent from './components/ExampleComponent.vue';
 import AdminComponent from "./components/admin/AdminComponent.vue";
 import EnginesComponent from "./components/admin/engines/EnginesComponent.vue";
+import AutomobilesComponent from "./components/admin/auto/AutomobilesComponent.vue";
 import LaravelVuePagination from 'laravel-vue-pagination';
 
 
-app.component('example-component', ExampleComponent);
+
 app.component('admin-component',AdminComponent);
 app.component('eng-component', EnginesComponent);
+app.component('auto-component', AutomobilesComponent)
 app.component('pagination', LaravelVuePagination)
 /**
  * The following block of code may be used to automatically register your

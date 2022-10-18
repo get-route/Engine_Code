@@ -12,13 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('boss_panel/auto','App\Http\Controllers\Admin\Test@data');
+
 Route::get('/','App\Http\Controllers\EngineController@index')->name('index');
 Route::group(['prefix'=>'/boss_panel','middleware'=>'admin'],function (){
     Route::get('/','App\Http\Controllers\Admin\AdminIndexController@index')->name('admin_panel');
     Route::get('/engines','App\Http\Controllers\Admin\EnginesController@index')->name('engines.index');
-    Route::get('/auto','App\Http\Controllers\Admin\AutoModelController@index');
-
+    Route::get('/auto','App\Http\Controllers\Admin\AutoModelController@index')->name('auto.index');
 });
 
 

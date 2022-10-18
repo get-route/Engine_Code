@@ -47,12 +47,8 @@
         <div class="content">
             <div class="container">
                 <!-- /.row -->
-
-                    <div class="card-header">
-                        <h3 class="card-title">DataTable with default features</h3>
-                    </div>
                     <div id="app">
-<eng-component></eng-component>
+                        <auto-component></auto-component>
                     </div>
             </div>
             <!-- /.container-fluid -->
@@ -67,5 +63,3 @@
 
 </body>
 </html>
-
-
