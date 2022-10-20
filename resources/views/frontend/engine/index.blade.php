@@ -1,5 +1,5 @@
-@section('title','Двигатель Nan - расположение номера, где смотреть, как выбит, каталожные данные')
-@section('description','Характеристика каталожных данных мотора Nan. Где находится номер двигателя Nan. Как найти и проверить его онлайн.')
+@section('title','Двигатель '.$engines_data->name.' - расположение номера, где смотреть, как выбит, каталожные данные')
+@section('description','Характеристика каталожных данных мотора '.$engines_data->name.'. Где находится номер двигателя '.$engines_data->name.'. Как найти и проверить его онлайн.')
 @include('frontend.layout.menu')
 @include('frontend.layout.footer')
 @include('frontend.layout.head')
@@ -20,19 +20,15 @@
     <div class="container">
         <div class="row ">
             <div class="col-lg-12 text-center">
-                <h1 class="text-center">Двигатель Nan - расположение номера и модель</h1>
+                <h1 class="text-center">Двигатель {{$engines_data->name}} - расположение номера и модель</h1>
                 <hr class="hr-shadow">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                        <li class="breadcrumb-item"><a href="#">Номер двигателя 753</a></li>
+                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Номер и характеристики двигателя {{$engines_data->name}}</li>
                     </ol>
                 </nav>
             </div>
-
-
-
-
         </div>
     </div>
 </section>
@@ -46,6 +42,8 @@
                 <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="./#video">Видео</a> </div>
                 <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="./#comments">Комментарии</a> </div>
             </div>
+
+
             <div class="col-lg-12">
                 <img src="{{asset('frontend/img/engine-default.jpg')}}" class="img_engine" alt="">
                 <p class="text-right">Публикация от :  20.12.2012</p>
@@ -62,54 +60,17 @@
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach($automobiles as $auto)
+
                     <tr>
-                        <th scope="row">1</th>
-                        <td>УАЗ Хантер (1996 – наши дни)</td>
+                        <th scope="row">{{$auto->models_id}}</th>
+                        <td>{{$auto->name}}</td>
                         <td><img src="{{asset('frontend/img/brake.png')}}" alt="фото МОДЕЛЬ АВТО" class="img_char"></td>
-                        <td><a href="/" target="_blank">Найти</a></td>
+                        <td><a href="/{{$engines_data->slug}}/{{$auto->url}}" target="_blank">Найти</a></td>
                     </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>УАЗ Хантер (1996 – наши дни)</td>
-                        <td><img src="{{asset('frontend/img/brake.png')}}" alt="фото МОДЕЛЬ АВТО" class="img_char"></td>
-                        <td><a href="/" target="_blank">Найти</a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>УАЗ Хантер (1996 – наши дни)</td>
-                        <td><img src="{{asset('frontend/img/brake.png')}}" alt="фото МОДЕЛЬ АВТО" class="img_char"></td>
-                        <td><a href="/" target="_blank">Найти</a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>УАЗ Хантер (1996 – наши дни)</td>
-                        <td><img src="{{asset('frontend/img/brake.png')}}" alt="фото МОДЕЛЬ АВТО" class="img_char"></td>
-                        <td><a href="/" target="_blank">Найти</a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>VOLVO S40 2004 - 2007</td>
-                        <td><img src="{{asset('frontend/img/brake.png')}}" alt="фото МОДЕЛЬ АВТО" class="img_char"></td>
-                        <td><a href="/" target="_blank">Найти</a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>УАЗ Хантер (1996 – наши дни)</td>
-                        <td><img src="{{asset('frontend/img/brake.png')}}" alt="фото МОДЕЛЬ АВТО" class="img_char"></td>
-                        <td><a href="/" target="_blank">Найти</a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>VOLVO S40 2004 - 2007</td>
-                        <td><img src="{{asset('frontend/img/blog-post-04.jpg')}}" alt="фото МОДЕЛЬ АВТО" class="img_char"></td>
-                        <td><a href="/" target="_blank">Найти</a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>УАЗ Хантер (1996 – наши дни)</td>
-                        <td><img src="{{asset('frontend/img/brake.png')}}" alt="фото МОДЕЛЬ АВТО" class="img_char"></td>
-                        <td><a href="/" target="_blank">Найти</a></td>
-                    </tr>
+
+                    @endforeach
+
                     </tbody>
                 </table>
             </div>
@@ -132,7 +93,7 @@
             <div class="col-lg-4 table-character">
 
                     <div class="col-lg-10">
-                        <p>Количество цилиндров в блоке : L4</p>
+                        <p>Количество цилиндров в блоке : L4{</p>
                         <hr class="hr-shadow">
                     </div>
 

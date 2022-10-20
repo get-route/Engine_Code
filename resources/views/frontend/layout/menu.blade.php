@@ -12,8 +12,8 @@
                 <!-- ***** Menu Start ***** -->
                 <ul class="nav">
                     <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                    <li class="scroll-to-section"><a href="{{route('model.index')}}" target="_blank">Модели</a></li>
-                    <li class="scroll-to-section"><a href="{{route('engine.index')}}" target="_blank">Двигатели</a></li>
+                    <li class="scroll-to-section"><a href="" target="_blank">Модели</a></li>
+                    <li class="scroll-to-section"><a href="" target="_blank">Двигатели</a></li>
                     <li class="scroll-to-section"><a href="#contact">ВинКод</a></li>
                     <li class="scroll-to-section"><div class="border-first-button"><a href="#contact">Free Quote</a></div></li>
                 </ul>

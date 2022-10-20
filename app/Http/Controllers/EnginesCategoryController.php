@@ -2,21 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Engines;
+use App\Models\Automobiles;
+use App\Models\Engine;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class EngineController extends Controller
+class EnginesCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($engine)
     {
-        return view('frontend.index');
+
+        $engines_data = Engine::where('slug',$engine)->first();
+        if (!$engines_data){
+            abort(404);
         }
+        $automobiles = $engines_data->automobiles;
+        return view('frontend.engine.index',compact('engines_data','automobiles'));
+    }
 
     /**
      * Show the form for creating a new resource.
