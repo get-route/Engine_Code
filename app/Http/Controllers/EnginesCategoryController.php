@@ -21,7 +21,9 @@ class EnginesCategoryController extends Controller
             abort(404);
         }
         $automobiles = $engines_data->automobiles;
-        return view('frontend.engine.index',compact('engines_data','automobiles'));
+        $random_engine = Engine::all()->values('name','slug','updated_at')->random(5);
+        $random_model = Automobiles::all()->values('name','url','updated_at','photos')->random(3);
+        return view('frontend.engine.index',compact('engines_data','automobiles','random_engine','random_model'));
     }
 
     /**

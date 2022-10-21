@@ -12,7 +12,7 @@ class Engine extends Model
     protected $table = 'engines';
    // protected $fillable = ['automobile_id,id,specs,name,created_at,updated_at'];
     protected $guarded = [];
-
+    protected $casts = ['specs'=>'object'];
     public function sluggable(): array
     {
         return [
@@ -25,4 +25,5 @@ class Engine extends Model
     {
         return $this->hasMany(Automobiles::class,'models_id','automobile_id');
     }
+
 }

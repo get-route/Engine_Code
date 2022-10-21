@@ -46,14 +46,14 @@
 
             <div class="col-lg-12">
                 <img src="{{asset('frontend/img/engine-default.jpg')}}" class="img_engine" alt="">
-                <p class="text-right">Публикация от :  20.12.2012</p>
+                <p class="text-right">Публикация от :  {{$engines_data->updated_at->format('d-m-Y')}}</p>
             </div>
         </div>
             <div class="col-lg-8">
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">Позиция в каталоге (#)</th>
                         <th scope="col">На каких моделях</th>
                         <th scope="col">Фото</th>
                         <th scope="col">Где номер</th>
@@ -82,66 +82,26 @@
         <div class="row">
             <div class="col-lg-12 text-center " >
                 <div class="section-heading">
-                    <h4>Параметры двигателя <em>NAN</em></h4>
+                    <h4>Параметры двигателя <em>{{$engines_data->name}}</em></h4>
                     <div class="line-dec"></div>
                 </div>
             </div>
         </div>
 
         <div class="row">
-
+            @if(is_object($engines_data->specs))
+            @foreach($engines_data->specs as $key=>$value)
             <div class="col-lg-4 table-character">
-
                     <div class="col-lg-10">
-                        <p>Количество цилиндров в блоке : L4{</p>
+
+
+                        {{$value}}
+
                         <hr class="hr-shadow">
                     </div>
-
-            </div>             <div class="col-lg-4 table-character">
-
-                    <div class="col-lg-10">
-                        <p>Количество цилиндров в блоке : L4</p>
-                        <hr class="hr-shadow">
-                    </div>
-
-            </div>             <div class="col-lg-4 table-character">
-
-                    <div class="col-lg-10">
-                        <p>Количество цилиндров в блоке : L4</p>
-                        <hr class="hr-shadow">
-                    </div>
-
-            </div>             <div class="col-lg-4 table-character">
-
-                    <div class="col-lg-10">
-                        <p>Количество цилиндров в блоке : L4</p>
-                        <hr class="hr-shadow">
-                    </div>
-
-            </div>             <div class="col-lg-4 table-character">
-
-                    <div class="col-lg-10">
-                        <p>Серийная мощность : 66 Kw (Киловатт/час) @ 4000 (оборотов/мин)/90Л.С @ 4000 (оборотов/мин)/89 Л.С (без учета потерь) @ 4000 (об/мин)
-                        </p>
-                        <hr class="hr-shadow">
-                    </div>
-
-            </div>             <div class="col-lg-4 table-character">
-
-                    <div class="col-lg-10">
-                        <p>Колесная база (+/- дорожный просвет) : 107.9 дюйма (2741 мм)
-                        </p>
-                        <hr class="hr-shadow">
-                    </div>
-
-            </div>             <div class="col-lg-4 table-character">
-
-                    <div class="col-lg-10">
-                        <p>Количество цилиндров в блоке : L4</p>
-                        <hr class="hr-shadow">
-                    </div>
-
             </div>
+            @endforeach
+            @endif
         </div>
     </div>
 </section>
@@ -160,71 +120,21 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="loop owl-carousel">
+                        @foreach( $random_engine as $rand_engines)
                         <div class="item">
-                            <a href="#">
+                            <a href="{{route('index')}}/{{$rand_engines->slug}}">
                                 <div class="portfolio-item">
                                     <div class="thumb">
-                                        <img src="{{asset('frontend/img/portfolio-01.jpg')}}" alt="">
+                                        <img src="{{asset('frontend/img/random_engine.jpg')}}" alt="Популярные модели двигателей {{$rand_engines->name}}">
                                     </div>
                                     <div class="down-content">
-                                        <h4>Website Builder</h4>
-                                        <span>Marketing</span>
+                                        <h4>{{$rand_engines->name}}</h4>
+                                        <span>{{$rand_engines->updated_at->format('d-m-Y')}}</span>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img src="{{asset('frontend/img/portfolio-01.jpg')}}" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Website Builder</h4>
-                                        <span>Marketing</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img src="{{asset('frontend/img/portfolio-02.jpg')}}" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Website Builder</h4>
-                                        <span>Marketing</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img src="{{asset('frontend/img/portfolio-03.jpg')}}" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Website Builder</h4>
-                                        <span>Marketing</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img src="{{asset('frontend/img/portfolio-04.jpg')}}" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Website Builder</h4>
-                                        <span>Marketing</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -247,8 +157,8 @@
                             class="video"
                             width="100%"
                             height=350px
-                            src="//www.youtube.com/embed/RKlbeSk3L0g"
-                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=//www.youtube.com/embed/RKlbeSk3L0g?autoplay=1><img src=//img.youtube.com/vi/RKlbeSk3L0g/hqdefault.jpg alt='Видео о проверке подлинности' class='video img-fluid'><span>▶</span></a>"
+                            src="//www.youtube.com/embed/GI1Ym3RS2TY"
+                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=//www.youtube.com/embed/GI1Ym3RS2TY?autoplay=1><img src=//img.youtube.com/vi/GI1Ym3RS2TY/hqdefault.jpg alt='Видео о проверке подлинности' class='video img-fluid'><span>▶</span></a>"
                             frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen
@@ -257,41 +167,26 @@
                     </div>
                     <div class="down-content">
                         <span class="category">Видео</span>
-                        <a href="#"><h4 id="video">Видео по поиску номера двигателя NAN</h4></a>
-                        <p>Подробная инструкция по поиску и тому как находить номер для двигателей NAN</p>
+                        <h4 id="video">Видео по поиску номера двигателя {{$engines_data->name}}</h4</a>
+                        <p>Видеоинструкция по поиску и устранению возможных неисправностей при идентификации номера двигателя {{$engines_data->name}}</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                 <div class="blog-posts">
                     <div class="row">
+                        @foreach($random_model as $rand_models)
                         <div class="col-lg-12">
                             <div class="post-item">
-                                <div class="thumb">
-                                    <a href="#"><img src="{{asset('frontend/img/blog-post-02.jpg')}}" alt=""></a>
-                                </div>
-                                <div class="right-content">
-                                    <span class="category">SEO Analysis</span>
-                                    <span class="date">24 September 2021</span>
-                                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="post-item">
-                                <div class="thumb">
-                                    <a href="#"><img src="{{asset('frontend/img/blog-post-03.jpg')}}" alt=""></a>
-                                </div>
-                                <div class="right-content">
-                                    <span class="category">SEO Analysis</span>
-                                    <span class="date">24 September 2021</span>
-                                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
-                                </div>
-                            </div>
-                        </div>
 
+                                <div class="right-content">
+                                    <span class="category">{{$rand_models->updated_at->format('d-m-Y')}}</span>
+                                    <a href="#"><h4>{{$rand_models->name}}</h4></a>
+                                    <p>Характеристика, номер мотора и дополнительные сведения для {{$rand_models->name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
