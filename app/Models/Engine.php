@@ -21,9 +21,10 @@ class Engine extends Model
             ]
         ];
     }
+
     public function automobiles()
     {
-        return $this->hasMany(Automobiles::class,'models_id','automobile_id');
+        return $this->belongsTo(Automobiles::class,'automobile_id','models_id');
     }
 
 }

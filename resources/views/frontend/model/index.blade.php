@@ -1,5 +1,5 @@
-@section('title','УАЗ Хантер (1993) - где находится номер двигателя, проверка мотора')
-@section('description','Где расположен номер двигателя на NAN. Как и где найти его на дизеле и бензине. Параметры мотора NAN. Проверка при постановке на учет по каталожному номеру.')
+@section('title',"$models_data->name - где находится номер двигателя, проверка мотора")
+@section('description','Где расположен номер двигателя на '. $models_data->name.'. Как и где найти его на дизеле и бензине. Параметры мотора '. $models_data->name.'. Проверка при постановке на учет по каталожному номеру.')
 @include('frontend.layout.menu')
 @include('frontend.layout.footer')
 @include('frontend.layout.head')
@@ -20,13 +20,12 @@
     <div class="container">
         <div class="row ">
             <div class="col-lg-12 text-center">
-                <h1 class="text-center">Где найти номер двигателя на УАЗ Хантер (1993)</h1>
+                <h1 class="text-center">Где найти номер двигателя на {{$models_data->name}}</h1>
                 <hr class="hr-shadow">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                        <li class="breadcrumb-item"><a href="#">Номер двигателя 753</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">УАЗ Хантер (1993)</li>
+                        <li class="breadcrumb-item active" aria-current="page">Варианты расположения номера мотора {{$models_data->name}}</li>
                     </ol>
                 </nav>
             </div>
@@ -47,10 +46,7 @@
                     <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="./#video">Видео</a> </div>
                     <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="./#comments">Комментарии</a> </div>
                 </div>
-                <div class="col-lg-12">
-                    <img src="{{asset('frontend/img/models/HONDA-Element-891_52.jpeg')}}" class="img_engine" alt="">
-                    <p class="text-right">Публикация от :  20.12.2012</p>
-                </div>
+
             </div>
             <div class="col-lg-8">
                 <table class="table table-hover">
@@ -63,28 +59,38 @@
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach($engines_model as $engine_auto)
                     <tr>
-                        <th scope="row">1</th>
-                        <td>7.0L V8 3AT (350Л.С)</td>
-                        <td><img src="{{asset('frontend/img/brake.png')}}" alt="фото МОДЕЛЬ АВТО" class="img_char"></td>
-                        <td><a href="/" target="_blank">Посмотреть</a></td>
+                        <th scope="row">{{$engine_auto->id}}</th>
+                        <td>{{$engine_auto->name}}</td>
+                        <td><img src="{{asset('frontend/img/brake.png')}}" alt="параметры двигателя {{$engine_auto->id}} и номер" class="img_char"></td>
+                        <td><a href="{{route('index')}}/{{$engine_auto->slug}}" target="_blank">Посмотреть</a></td>
                     </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>3.5L V8 32V Turbo 6MT (354Л.С)</td>
-                        <td><img src="{{asset('frontend/img/brake.png')}}" alt="фото МОДЕЛЬ АВТО" class="img_char"></td>
-                        <td><a href="/" target="_blank">Посмотреть</a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>7.0L V8 3AT (350Л.С)</td>
-                        <td><img src="{{asset('frontend/img/brake.png')}}" alt="фото МОДЕЛЬ АВТО" class="img_char"></td>
-                        <td><a href="/" target="_blank">Посмотреть</a></td>
-                    </tr>
-
+                    @endforeach
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+</section>
+<section class="photos">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="{{asset("frontend/img/models/$img_model_arr[0]")}}" class="img_engine"
+                     alt="Фото модели {{$models_data->name}} и расположение номера двигателя онлайн">
+                <p class="text-right">Публикация от : 20.12.2012</p>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                @foreach($img_model_arr as $images)
+                    <div class="col-lg-3">
+                        <img src="{{asset("frontend/img/models/$images")}}" class="img_engine_thumbnail"
+                             alt="Внешний вид и поиск номера модели {{$models_data->name}}">
+                    </div>
+                @endforeach
+            </div>
+        </div>
         </div>
     </div>
 </section>
@@ -93,67 +99,15 @@
         <div class="row">
             <div class="col-lg-12 text-center " >
                 <div class="section-heading">
-                    <h4>Параметры двигателя <em>NAN</em></h4>
+                    <h4>Где следует искать номер двигателя <em>{{$models_data->name}} в первую очередь</em></h4>
                     <div class="line-dec"></div>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-
-            <div class="col-lg-4 table-character">
-
-                <div class="col-lg-10">
-                    <p>Количество цилиндров в блоке : L4</p>
-                    <hr class="hr-shadow">
-                </div>
-
-            </div>             <div class="col-lg-4 table-character">
-
-                <div class="col-lg-10">
-                    <p>Количество цилиндров в блоке : L4</p>
-                    <hr class="hr-shadow">
-                </div>
-
-            </div>             <div class="col-lg-4 table-character">
-
-                <div class="col-lg-10">
-                    <p>Количество цилиндров в блоке : L4</p>
-                    <hr class="hr-shadow">
-                </div>
-
-            </div>             <div class="col-lg-4 table-character">
-
-                <div class="col-lg-10">
-                    <p>Количество цилиндров в блоке : L4</p>
-                    <hr class="hr-shadow">
-                </div>
-
-            </div>             <div class="col-lg-4 table-character">
-
-                <div class="col-lg-10">
-                    <p>Серийная мощность : 66 Kw (Киловатт/час) @ 4000 (оборотов/мин)/90Л.С @ 4000 (оборотов/мин)/89 Л.С (без учета потерь) @ 4000 (об/мин)
-                    </p>
-                    <hr class="hr-shadow">
-                </div>
-
-            </div>             <div class="col-lg-4 table-character">
-
-                <div class="col-lg-10">
-                    <p>Колесная база (+/- дорожный просвет) : 107.9 дюйма (2741 мм)
-                    </p>
-                    <hr class="hr-shadow">
-                </div>
-
-            </div>             <div class="col-lg-4 table-character">
-
-                <div class="col-lg-10">
-                    <p>Количество цилиндров в блоке : L4</p>
-                    <hr class="hr-shadow">
-                </div>
-
+            <div class="col-lg-12">
+                 {!!$models_data->press_release!!}
             </div>
         </div>
+
     </div>
 </section>
 <section class="random_auto">
@@ -169,98 +123,27 @@
         </div>
         <div class="container-fluid fadeIn">
             <div class="row">
+
                 <div class="col-lg-12">
                     <div class="loop owl-carousel">
+                        @foreach($random_model as $models)
                         <div class="item">
-                            <a href="#">
+                            <a href="{{route('index')}}/car/{{$models->url}}">
                                 <div class="portfolio-item">
                                     <div class="thumb">
                                         <img
-                                            src="{{asset('frontend/img/models/CHEVROLET-Silverado-2500-HD-Double-Cab-5134_3.jpg')}}"
+                                            src="{{asset("frontend/img/models/default.jpeg")}}"
                                             alt="">
                                     </div>
                                     <div class="down-content">
-                                        <h4>Website Builder</h4>
-                                        <span>Marketing</span>
+                                        <h4>{{$models->name}}</h4>
+                                        <span>{{$models->updated_at->format('d-m-Y')}}</span>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img
-                                            src="{{asset('frontend/img/models/CHEVROLET-Silverado-3500-HD-Crew-Cab-5138_3.jpg')}}"
-                                            alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Website Builder</h4>
-                                        <span>Marketing</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img
-                                            src="{{asset('frontend/img/models/CHEVROLET-Silverado-2500-HD-Double-Cab-5134_3.jpg')}}"
-                                            alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Website Builder</h4>
-                                        <span>Marketing</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img
-                                            src="{{asset('frontend/img/models/CHEVROLET-Silverado-3500-HD-Crew-Cab-5138_3.jpg')}}"
-                                            alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Website Builder</h4>
-                                        <span>Marketing</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img
-                                            src="{{asset('frontend/img/models/CHEVROLET-Silverado-2500-HD-Double-Cab-5134_3.jpg')}}"
-                                            alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Website Builder</h4>
-                                        <span>Marketing</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img
-                                            src="{{asset('frontend/img/models/CHEVROLET-Silverado-3500-HD-Crew-Cab-5138_3.jpg')}}"
-                                            alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Website Builder</h4>
-                                        <span>Marketing</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        @endforeach
+
                     </div>
                 </div>
             </div>
@@ -283,8 +166,8 @@
                             class="video"
                             width="100%"
                             height=350px
-                            src="//www.youtube.com/embed/RKlbeSk3L0g"
-                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=//www.youtube.com/embed/RKlbeSk3L0g?autoplay=1><img src=//img.youtube.com/vi/RKlbeSk3L0g/hqdefault.jpg alt='Видео о проверке подлинности' class='video img-fluid'><span>▶</span></a>"
+                            src="//www.youtube.com/embed/F38XGcervic"
+                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=//www.youtube.com/embed/F38XGcervic?autoplay=1><img src=//img.youtube.com/vi/F38XGcervic/hqdefault.jpg alt='найти номер двигателя' class='video img-fluid'><span>▶</span></a>"
                             frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen
@@ -293,41 +176,25 @@
                     </div>
                     <div class="down-content">
                         <span class="category">Видео</span>
-                        <a href="#"><h4 id="video">Видео по поиску номера двигателя NAN</h4></a>
-                        <p>Подробная инструкция по поиску и тому как находить номер для двигателей NAN</p>
+                        <a href="#"><h4 id="video">Видео по поиску номера двигателя {{$engine_auto->name}}</h4></a>
+                        <p>Подробная инструкция по поиску и тому как находить номер для двигателей {{$engine_auto->name}}</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                 <div class="blog-posts">
                     <div class="row">
+                        @foreach($random_engine as $engines)
                         <div class="col-lg-12">
                             <div class="post-item">
-                                <div class="thumb">
-                                    <a href="#"><img src="{{asset('frontend/img/engine-default.jpg')}}" alt=""></a>
-                                </div>
                                 <div class="right-content">
-                                    <span class="category">SEO Analysis</span>
-                                    <span class="date">24 September 2021</span>
-                                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
+                                    <span class="category">{{$engines->updated_at->format('d-m-Y')}}</span>
+                                    <a href="{{route('index')}}/{{$engines->slug}}"><h4>{{$engines->name}}</h4></a>
+                                    <p>Характеристики и основные модели автомобилей для двигателя {{$engines->name}}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            <div class="post-item">
-                                <div class="thumb">
-                                    <a href="#"><img src="{{asset('frontend/img/engine-default.jpg')}}" alt=""></a>
-                                </div>
-                                <div class="right-content">
-                                    <span class="category">SEO Analysis</span>
-                                    <span class="date">24 September 2021</span>
-                                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
-                                </div>
-                            </div>
-                        </div>
-
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -339,14 +206,11 @@
         <div class="row">
             <div class="col-lg-12 text-center" >
                 <div class="section-heading">
-                    <h4 id="nomer">Где расположен <em>номер</em> на двигателе NAN</h4>
+                    <h4 id="nomer">Где расположен <em>номер</em> на двигателе {{$models_data->name}}</h4>
                 </div>
             </div>
             <div class="col-lg-12 text-center">
-                <p>
-                    Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым. Это тестовый контент, который не должен нести никакого смысла, лишь показать наличие самого текста или продемонстрировать типографику в деле.
-                    Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым. Это тестовый контент, который не должен нести никакого смысла, лишь показать наличие самого текста или продемонстрировать типографику в деле.
-                </p>
+                {!!$models_data->description!!}
             </div>
         </div>
     </div>
@@ -416,14 +280,6 @@
 </section>
 <footer class="footer">
     @yield('footer')
-    <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
-    <script src="{{asset('frontend/js/imagesloaded.js')}}"></script>
-
-    @vite([
-    'resources/frontend/js/bootstrap.bundle.min.js',
-    'resources/frontend/js/owl-carousel.js',
-    'resources/frontend/js/custom.js',
-    ])
 </footer>
 </body>
 </html>

@@ -102,6 +102,8 @@
         <p>@Все права защищены. {{date('Y')}}. Сервис берет информацию из открытых источников. Во избежании проблем
             советуем Вам проверять сведения о номере двигателя у Вашего производителя.</p>
     </div>
+    <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
+    <script src="{{asset('frontend/js/imagesloaded.js')}}"></script>
     @vite([
     'resources/frontend/js/bootstrap.bundle.min.js',
     'resources/frontend/js/owl-carousel.js',

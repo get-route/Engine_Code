@@ -60,16 +60,13 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($automobiles as $auto)
-
                     <tr>
-                        <th scope="row">{{$auto->models_id}}</th>
-                        <td>{{$auto->name}}</td>
+                        <th scope="row">{{$automobiles->models_id}}</th>
+                        <td>{{$automobiles->name}}</td>
                         <td><img src="{{asset('frontend/img/brake.png')}}" alt="фото МОДЕЛЬ АВТО" class="img_char"></td>
-                        <td><a href="/{{$engines_data->slug}}/{{$auto->url}}" target="_blank">Найти</a></td>
+                        <td><a href="{{route('index')}}/car/{{$automobiles->url}}" target="_blank">Найти</a></td>
                     </tr>
 
-                    @endforeach
 
                     </tbody>
                 </table>
@@ -158,7 +155,7 @@
                             width="100%"
                             height=350px
                             src="//www.youtube.com/embed/GI1Ym3RS2TY"
-                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=//www.youtube.com/embed/GI1Ym3RS2TY?autoplay=1><img src=//img.youtube.com/vi/GI1Ym3RS2TY/hqdefault.jpg alt='Видео о проверке подлинности' class='video img-fluid'><span>▶</span></a>"
+                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=//www.youtube.com/embed/GI1Ym3RS2TY?autoplay=1><img src=//img.youtube.com/vi/GI1Ym3RS2TY/hqdefault.jpg alt='характеристики и номера расположения двигателей' class='video img-fluid'><span>▶</span></a>"
                             frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen
@@ -181,7 +178,7 @@
 
                                 <div class="right-content">
                                     <span class="category">{{$rand_models->updated_at->format('d-m-Y')}}</span>
-                                    <a href="#"><h4>{{$rand_models->name}}</h4></a>
+                                    <a href="{{route('index')}}/car/{{$rand_models->url}}"><h4>{{$rand_models->name}}</h4></a>
                                     <p>Характеристика, номер мотора и дополнительные сведения для {{$rand_models->name}}</p>
                                 </div>
                             </div>
@@ -258,14 +255,6 @@
     </section>
 <footer class="footer">
     @yield('footer')
-    <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
-    <script src="{{asset('frontend/js/imagesloaded.js')}}"></script>
-
-    @vite([
-    'resources/frontend/js/bootstrap.bundle.min.js',
-    'resources/frontend/js/owl-carousel.js',
-    'resources/frontend/js/custom.js',
-    ])
 </footer>
 </body>
 </html>

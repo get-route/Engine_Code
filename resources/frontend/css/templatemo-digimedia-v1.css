@@ -873,6 +873,10 @@ header
     height: auto;
     border-radius: 20px;
 }
+.img_engine_thumbnail img{
+    width:100px;
+    height: auto;
+}
 .img_char{
     width: 30px;
     height: auto;

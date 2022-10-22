@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Automobiles;
+use App\Models\Engine;
 use Illuminate\Http\Request;
 
 class ModelController extends Controller
@@ -11,9 +13,17 @@ class ModelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($model)
     {
-        return view('frontend.model.index');
+        $models_data = Automobiles::where('url',$model)->first();
+        if (!$models_data){
+            abort(404);
+        }
+        $img_model_arr = explode(' ',trim($models_data->photos));
+        $engines_model = $models_data->engine;
+        $random_engine = Engine::all()->values('name','slug','updated_at')->random(3);
+        $random_model = Automobiles::all()->values('name','url','updated_at','photos')->random(5);
+        return view('frontend.model.index',compact('models_data','img_model_arr','engines_model','random_model','random_engine'));
     }
 
     /**
