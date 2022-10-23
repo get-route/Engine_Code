@@ -11,11 +11,10 @@
 
                 <!-- ***** Menu Start ***** -->
                 <ul class="nav">
-                    <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                    <li class="scroll-to-section"><a href="" target="_blank">Модели</a></li>
-                    <li class="scroll-to-section"><a href="" target="_blank">Двигатели</a></li>
-                    <li class="scroll-to-section"><a href="#contact">ВинКод</a></li>
-                    <li class="scroll-to-section"><div class="border-first-button"><a href="#contact">Free Quote</a></div></li>
+                    <li class="scroll-to-section"><a href="/#automobile" target="_blank">Модели</a></li>
+                    <li class="scroll-to-section"><a href="/#engines" target="_blank">Двигатели</a></li>
+                    <li class="scroll-to-section"><a href="/#about">О нас</a></li>
+                    <li class="scroll-to-section"><a href="#footer">Контакты</a></li>
                 </ul>
                 <a class='menu-trigger'>
                     <span>Menu</span>

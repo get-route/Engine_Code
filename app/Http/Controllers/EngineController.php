@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Automobiles;
+use App\Models\Engine;
 use App\Models\Engines;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -15,7 +17,10 @@ class EngineController extends Controller
      */
     public function index()
     {
-        return view('frontend.index');
+        $random_engine = Engine::all()->values('name','slug','updated_at')->random(5);
+        $random_model = Automobiles::all()->values('name','url','updated_at','photos')->random(3);
+
+        return view('frontend.index', compact('random_engine','random_model'));
         }
 
     /**

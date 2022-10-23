@@ -37,10 +37,10 @@
         <div class="row" id="params">
         <div class="col-lg-4">
             <div class="row">
-                <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="./#params">Характеристики</a> </div>
-                <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="./#modeng">Авто</a> </div>
-                <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="./#video">Видео</a> </div>
-                <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="./#comments">Комментарии</a> </div>
+                <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#params">Характеристики</a> </div>
+                <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#modeng">Популярные двигатели</a> </div>
+                <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#video">Видео</a> </div>
+                <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#comments">Отзывы</a> </div>
             </div>
 
 
@@ -79,7 +79,7 @@
         <div class="row">
             <div class="col-lg-12 text-center " >
                 <div class="section-heading">
-                    <h4>Параметры двигателя <em>{{$engines_data->name}}</em></h4>
+                    <h2 id="params">Параметры двигателя <em>{{$engines_data->name}}</em></h2>
                     <div class="line-dec"></div>
                 </div>
             </div>
@@ -108,7 +108,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center" >
                     <div class="section-heading">
-                        <h4>Популярные <em>двигатели</em></h4>
+                        <h3 id="modeng">Популярные <em>двигатели</em></h3>
                     </div>
                 </div>
             </div>
@@ -144,7 +144,7 @@
         <div class="row">
             <div class="col-lg-12 text-center" >
                 <div class="section-heading">
-                    <h4>Популярные <em>автомобили</em></h4>
+                    <h3>Популярные <em>автомобили</em></h3>
                 </div>
             </div>
             <div class="col-lg-6 " >
@@ -164,7 +164,7 @@
                     </div>
                     <div class="down-content">
                         <span class="category">Видео</span>
-                        <h4 id="video">Видео по поиску номера двигателя {{$engines_data->name}}</h4</a>
+                        <h3 id="video">Видео по поиску номера двигателя {{$engines_data->name}}</h3
                         <p>Видеоинструкция по поиску и устранению возможных неисправностей при идентификации номера двигателя {{$engines_data->name}}</p>
                     </div>
                 </div>
@@ -196,7 +196,7 @@
                 <div class="col-md-12 col-lg-10 col-xl-8">
                     <div class="col-lg-12 text-center" >
                         <div class="section-heading">
-                            <h4>Последние <em>комментарии</em></h4>
+                            <h4 id="comments">Отзывы  о <em>{{$engines_data->name}}</em></h4>
                         </div>
                     </div>
 
@@ -214,10 +214,10 @@
 
                                 <div class="w-100">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h6 class="text-primary fw-bold mb-0">
+                                        <h5 class="text-primary fw-bold mb-0">
                                             Иван Усов,
                                             <span class="text-dark ms-2"> "Странно, мне этот Ваш движок не показался наилучшим вариантов."</span>
-                                        </h6>
+                                        </h5>
                                         <p class="mb-0">2 дня назад</p>
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center">

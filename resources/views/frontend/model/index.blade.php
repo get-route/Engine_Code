@@ -41,10 +41,10 @@
         <div class="row" id="params">
             <div class="col-lg-4">
                 <div class="row">
-                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="./#params">Про двигатель</a> </div>
-                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="./#nomer">Где номер</a> </div>
-                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="./#video">Видео</a> </div>
-                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="./#comments">Комментарии</a> </div>
+                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#params">Про двигатель</a> </div>
+                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#nomer">Где номер</a> </div>
+                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#video">Видео</a> </div>
+                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#comments">Отзывы владельцев</a> </div>
                 </div>
 
             </div>
@@ -99,8 +99,8 @@
         <div class="row">
             <div class="col-lg-12 text-center " >
                 <div class="section-heading">
-                    <h4>Где следует искать номер двигателя <em>{{$models_data->name}} в первую очередь</em></h4>
-                    <div class="line-dec"></div>
+                    <h2>Где следует искать номер двигателя <em>{{$models_data->name}} в первую очередь</em></h2>
+                    <div id="params" class="line-dec"></div>
                 </div>
             </div>
             <div class="col-lg-12">
@@ -116,7 +116,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-heading">
-                        <h4>Популярные <em>модели</em> авто</h4>
+                        <h3>Популярные <em>модели</em> авто</h3>
                     </div>
                 </div>
             </div>
@@ -132,7 +132,7 @@
                                 <div class="portfolio-item">
                                     <div class="thumb">
                                         <img
-                                            src="{{asset("frontend/img/models/default.jpeg")}}"
+                                            src="{{asset("frontend/img/models/default.jpg")}}"
                                             alt="">
                                     </div>
                                     <div class="down-content">
@@ -156,7 +156,7 @@
         <div class="row">
             <div class="col-lg-12 text-center" >
                 <div class="section-heading">
-                    <h4>Модификации <em>моторов</em></h4>
+                    <h3>Модификации <em>моторов</em></h3>
                 </div>
             </div>
             <div class="col-lg-6 " >
@@ -176,7 +176,7 @@
                     </div>
                     <div class="down-content">
                         <span class="category">Видео</span>
-                        <a href="#"><h4 id="video">Видео по поиску номера двигателя {{$engine_auto->name}}</h4></a>
+                        <h3 id="video">Видео по поиску номера двигателя {{$engine_auto->name}}</h3>
                         <p>Подробная инструкция по поиску и тому как находить номер для двигателей {{$engine_auto->name}}</p>
                     </div>
                 </div>
@@ -206,7 +206,7 @@
         <div class="row">
             <div class="col-lg-12 text-center" >
                 <div class="section-heading">
-                    <h4 id="nomer">Где расположен <em>номер</em> на двигателе {{$models_data->name}}</h4>
+                    <h2 id="nomer">Где расположен <em>номер</em> на двигателе {{$models_data->name}}</h2>
                 </div>
             </div>
             <div class="col-lg-12 text-center">
@@ -221,7 +221,7 @@
             <div class="col-md-12 col-lg-10 col-xl-8">
                 <div class="col-lg-12 text-center" >
                     <div class="section-heading">
-                        <h4>Последние <em>комментарии</em></h4>
+                        <h4 id="comments">Отзывы владельцев <em>{{$models_data->name}}</em></h4>
                     </div>
                 </div>
 
@@ -239,10 +239,10 @@
 
                             <div class="w-100">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h6 class="text-primary fw-bold mb-0">
+                                    <h5 class="text-primary fw-bold mb-0">
                                         Иван Усов,
                                         <span class="text-dark ms-2"> "Странно, мне этот Ваш движок не показался наилучшим вариантов."</span>
-                                    </h6>
+                                    </h5>
                                     <p class="mb-0">2 дня назад</p>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center">

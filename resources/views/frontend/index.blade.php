@@ -1,5 +1,5 @@
-@section('title','Тут будет заголовок главной страницы')
-@section('description','Описание для гл.страницы')
+@section('title','Расположение номера двигателя - где искать, как выглядит онлайн')
+@section('description','Сервис поиска номера двигателя для конкретной марки мотора и модели автомобиля. Расшифровка данных по Винкоду и список возможных вариантов нахождения номера для Вашего автомобиля онлайн.')
 @include('frontend.layout.menu')
 @include('frontend.layout.footer')
 @include('frontend.layout.head')
@@ -51,7 +51,7 @@
                                         data-bs-target="#flush-collapseOne" aria-expanded="false"
                                         aria-controls="flush-collapseOne" >
                                     <a href="#auto"> <img src="{{asset('frontend/img/service-icon-03.png')}}" alt="номер двигателя по автомобилю">
-                                    <h3>По автомобилю</h3></a>
+                                    <h2>По автомобилю</h2></a>
                                 </button>
                             </div>
                             <div class="col-lg-4 service-menu-item" id="flush-headingTwo">
@@ -60,7 +60,7 @@
                                         aria-controls="flush-collapseTwo">
                                     <a href="#model-engine">
                                     <img src="{{asset('frontend/img/service-icon-04.png')}}" alt="номер двигателя по модели силового агрегата">
-                                    <h3>По марке</h3>
+                                    <h2>По марке</h2>
                                         </a>
                                 </button>
                             </div>
@@ -70,7 +70,7 @@
                                         aria-controls="flush-collapseThree">
                                     <a href="#vin-code">
                                     <img src="{{asset('frontend/img/service-icon-01.png')}}" alt="найти номер двигателя по вин коду авто">
-                                   <h3> По вин коду</h3>
+                                   <h2> По вин коду</h2>
                                     </a>
                                 </button>
                             </div>
@@ -84,7 +84,7 @@
 
                                     <div class="row">
                                         <div class="col-lg-6 align-self-center">
-                                                <h4>Выберите модель своего авто</h4>
+                                                <h3>Выберите модель своего авто</h3>
                                                 <p>Выберите необходимую модель своего автомобиля и получите данные расположения номера двигателя. В описании к автомобилю можно будет увидеть дополнительную информацию.</p>
                                             <div class="ticks-list"><span><i class="fa fa-check"></i> Характеристики авто</span>
                                                 <span><i class="fa fa-check"></i> Мощность и модель двигателя</span> <span><i
@@ -110,7 +110,7 @@
 
                                     <div class="row">
                                         <div class="col-lg-6 align-self-center">
-                                            <h4>Задайте модель своего двигателя</h4>
+                                            <h3>Задайте модель своего двигателя</h3>
                                             <p>Вы можете просто выбрать нужную модель Вашего двигателя и просмотреть интересующую информацию касательно характеристики и расположений необходимых идентификационных данных</p>
                                             <div class="ticks-list"><span><i class="fa fa-check"></i> Мощности силового агрегата</span>
                                                 <span><i class="fa fa-check"></i> Допустимой нагрузки</span> <span><i
@@ -136,7 +136,7 @@
 
                                     <div class="row">
                                         <div class="col-lg-6 align-self-center">
-                                            <h4>Укажите ВинКод для проверки</h4>
+                                            <h3>Укажите ВинКод для проверки</h3>
                                             <p>Параметры автомобиля также можно узнать по винкоду. Для получения всей имеющейся информации Вам попросту необходимо будет его ввести в соответствующее поле. После распознования будет доступна общирная информация</p>
                                             <div class="ticks-list"><span><i class="fa fa-check"></i>Страна производства</span>
                                                 <span><i class="fa fa-check"></i> Год выпуска</span> <span><i
@@ -178,7 +178,7 @@
                     <div class="col-lg-6 align-self-center  " >
                         <div class="about-right-content">
                             <div class="section-heading ">
-                                <h6>Почему именно AiRall?</h6>
+                                <h2 id="about">Почему именно AiRall?</h2>
                                 <h4>Кому поможет наш <em>сервис</em></h4>
                                 <div class="line-dec"></div>
                             </div>
@@ -194,152 +194,94 @@
 </div>
 
 <hr class="hr-shadow">
-<div id="portfolio" class="our-portfolio section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <div class="section-heading ">
-                    <h4>Последние модели <em>двигателей</em></h4>
-                    <div class="line-dec"></div>
+<section class="random_auto">
+    <div id="portfolio" class="our-portfolio section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center" >
+                    <div class="section-heading">
+                        <h3 id="engines">Популярные <em>двигатели</em></h3>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid fadeIn" >
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="loop owl-carousel">
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="{{asset('frontend/img/portfolio-01.jpg')}}" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <h4>Website Builder</h4>
-                                    <span>Marketing</span>
-                                </div>
+        <div class="container-fluid fadeIn" >
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="loop owl-carousel">
+                        @foreach( $random_engine as $rand_engines)
+                            <div class="item">
+                                <a href="{{route('index')}}/{{$rand_engines->slug}}">
+                                    <div class="portfolio-item">
+                                        <div class="thumb">
+                                            <img src="{{asset('frontend/img/random_engine.jpg')}}" alt="Популярные модели двигателей {{$rand_engines->name}}">
+                                        </div>
+                                        <div class="down-content">
+                                            <h4>{{$rand_engines->name}}</h4>
+                                            <span>{{$rand_engines->updated_at->format('d-m-Y')}}</span>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="{{asset('frontend/img/portfolio-01.jpg')}}" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <h4>Website Builder</h4>
-                                    <span>Marketing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="{{asset('frontend/img/portfolio-02.jpg')}}" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <h4>Website Builder</h4>
-                                    <span>Marketing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="{{asset('frontend/img/portfolio-03.jpg')}}" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <h4>Website Builder</h4>
-                                    <span>Marketing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="{{asset('frontend/img/portfolio-04.jpg')}}" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <h4>Website Builder</h4>
-                                    <span>Marketing</span>
-                                </div>
-                            </div>
-                        </a>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<hr class="hr-shadow">
-<div id="blog" class="blog">
+    <hr class="hr-shadow">
+</section>
+<section id="blog" class="blog">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 offset-lg-4 " >
+            <div class="col-lg-12 text-center" >
                 <div class="section-heading">
-                    <h4>Популярные <em>автомобили</em></h4>
-                    <div class="line-dec"></div>
+                    <h3 id="automobile">Популярные <em>автомобили</em></h3>
                 </div>
             </div>
             <div class="col-lg-6 " >
                 <div class="blog-post">
                     <div class="thumb">
-                        <a href="#"><img src="{{asset('frontend/img/blog-post-01.jpg')}}" alt=""></a>
+                        <iframe
+                            class="video"
+                            width="100%"
+                            height=350px
+                            src="//www.youtube.com/embed/GI1Ym3RS2TY"
+                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=//www.youtube.com/embed/GI1Ym3RS2TY?autoplay=1><img src=//img.youtube.com/vi/GI1Ym3RS2TY/hqdefault.jpg alt='характеристики и номера расположения двигателей' class='video img-fluid'><span>▶</span></a>"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            title="Видео-отзыв"
+                        ></iframe>
                     </div>
                     <div class="down-content">
-                        <span class="category">SEO Analysis</span>
-                        <span class="date">03 August 2021</span>
-                        <a href="#"><h4>Lorem Ipsum Dolor Sit Amet, Consectetur Adelore
-                                Eiusmod Tempor Incididunt</h4></a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers itii eiumod deis tempor incididunt ut labore.</p>
-
+                        <span class="category">Видео</span>
+                        <h3 id="video">Видео по поиску номера двигателя </h3
+                        <p>Видеоинструкция по поиску и устранению возможных неисправностей при идентификации номера двигателя </p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                 <div class="blog-posts">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="post-item">
-                                <div class="thumb">
-                                    <a href="#"><img src="{{asset('frontend/img/blog-post-02.jpg')}}" alt=""></a>
-                                </div>
-                                <div class="right-content">
-                                    <span class="category">SEO Analysis</span>
-                                    <span class="date">24 September 2021</span>
-                                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="post-item">
-                                <div class="thumb">
-                                    <a href="#"><img src="{{asset('frontend/img/blog-post-03.jpg')}}" alt=""></a>
-                                </div>
-                                <div class="right-content">
-                                    <span class="category">SEO Analysis</span>
-                                    <span class="date">24 September 2021</span>
-                                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
-                                </div>
-                            </div>
-                        </div>
+                        @foreach($random_model as $rand_models)
+                            <div class="col-lg-12">
+                                <div class="post-item">
 
+                                    <div class="right-content">
+                                        <span class="category">{{$rand_models->updated_at->format('d-m-Y')}}</span>
+                                        <a href="{{route('index')}}/car/{{$rand_models->url}}"><h4>{{$rand_models->name}}</h4></a>
+                                        <p>Характеристика, номер мотора и дополнительные сведения для {{$rand_models->name}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <footer class="footer">
 @yield('footer')
