@@ -218,32 +218,26 @@
 <section class="characteristic">
     <div class="container my-5 py-5 text-dark">
         <div class="row d-flex justify-content-center">
-            <div class="col-md-12 col-lg-10 col-xl-8">
+            <div class="col-md-12 col-lg-10 col-xl-8 ">
                 <div class="col-lg-12 text-center" >
                     <div class="section-heading">
                         <h4 id="comments">Отзывы владельцев <em>{{$models_data->name}}</em></h4>
                     </div>
                 </div>
-
+                @foreach($comments as $comment)
                 <div class="card mb-3 col-lg-12">
-
-
-
                     <div class="card-body">
                         <div class="col-lg-12 text-center">
-
                             <img class="img_char " src="{{asset('frontend/img/comments.png')}}"/>
-
                         </div>
                         <div class="d-flex flex-start">
-
                             <div class="w-100">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <h5 class="text-primary fw-bold mb-0">
-                                        Иван Усов,
-                                        <span class="text-dark ms-2"> "Странно, мне этот Ваш движок не показался наилучшим вариантов."</span>
+                                        {{$comment->name}}
+                                        <span class="text-dark ms-2"> {{$comment->comment}}</span>
                                     </h5>
-                                    <p class="mb-0">2 дня назад</p>
+                                    <p class="mb-0">{{$comment->updated_at->format('d-m-Y')}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <p class="small mb-0" style="color: #aaa;">
@@ -254,7 +248,34 @@
                         </div>
                     </div>
                 </div>
-
+                @foreach($comments_parent as $comments_reply)
+                    @if($comments_reply->parent_id == $comment->id)
+                    <div class="card mb-3 col-lg-8 ">
+                        <div class="card-body">
+                            <div class="col-lg-12 text-center">
+                                <img class="img_char " src="{{asset('frontend/img/comments.png')}}"/>
+                            </div>
+                            <div class="d-flex flex-start">
+                                <div class="w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h5 class="text-primary fw-bold mb-0">
+                                            {{$comments_reply->name}}
+                                            <span class="text-dark ms-2"> {{$comments_reply->comment}}</span>
+                                        </h5>
+                                        <p class="mb-0">{{$comments_reply->updated_at->format('d-m-Y')}}</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="small mb-0" style="color: #aaa;">
+                                            <a href="#!" class="link-grey">Ответить</a> •
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        @endif
+                    @endforeach
+                @endforeach
             </div>
             <div class="col-lg-12">
                 <form action="/">

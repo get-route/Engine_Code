@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Automobiles;
+use App\Models\Comments;
 use App\Models\Engine;
 use Illuminate\Http\Request;
 
@@ -23,7 +24,9 @@ class ModelController extends Controller
         $engines_model = $models_data->engine;
         $random_engine = Engine::all()->values('name','slug','updated_at')->random(3);
         $random_model = Automobiles::all()->values('name','url','updated_at','photos')->random(5);
-        return view('frontend.model.index',compact('models_data','img_model_arr','engines_model','random_model','random_engine'));
+        $comments = Comments::where([['url_model','=',$models_data->id],['public','=','yes'],['parent_id','=',NULL]])->get();
+        $comments_parent = Comments::where([['url_model','=',$models_data->id],['public','=','yes'],['parent_id','>=',0]])->get();
+        return view('frontend.model.index',compact('models_data','img_model_arr','engines_model','random_model','random_engine','comments','comments_parent'));
     }
 
     /**

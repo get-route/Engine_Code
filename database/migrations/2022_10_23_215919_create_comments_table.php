@@ -16,6 +16,13 @@ return new class extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->text('name');
+            $table->text('email');
+            $table->text('comment');
+            $table->integer('url_model')->nullable();
+            $table->integer('url_engine')->nullable();
+            $table->integer('parent_id')->nullable();
+            $table->char('public')->default('no');
         });
     }
 
