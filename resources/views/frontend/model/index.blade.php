@@ -25,12 +25,11 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Варианты расположения номера мотора {{$models_data->name}}</li>
+                        <li class="breadcrumb-item active" aria-current="page">Варианты расположения номера
+                            мотора {{$models_data->name}}</li>
                     </ol>
                 </nav>
             </div>
-
-
 
 
         </div>
@@ -41,10 +40,11 @@
         <div class="row" id="params">
             <div class="col-lg-4">
                 <div class="row">
-                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#params">Про двигатель</a> </div>
-                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#nomer">Где номер</a> </div>
-                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#video">Видео</a> </div>
-                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#comments">Отзывы владельцев</a> </div>
+                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#params">Про двигатель</a></div>
+                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#nomer">Где номер</a></div>
+                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#video">Видео</a></div>
+                    <div class="col-lg-12 mb-2"><a class="btn btn-secondary" href="#comments">Отзывы владельцев</a>
+                    </div>
                 </div>
 
             </div>
@@ -60,12 +60,13 @@
                     </thead>
                     <tbody>
                     @foreach($engines_model as $engine_auto)
-                    <tr>
-                        <th scope="row">{{$engine_auto->id}}</th>
-                        <td>{{$engine_auto->name}}</td>
-                        <td><img src="{{asset('frontend/img/brake.png')}}" alt="параметры двигателя {{$engine_auto->id}} и номер" class="img_char"></td>
-                        <td><a href="{{route('index')}}/{{$engine_auto->slug}}" target="_blank">Посмотреть</a></td>
-                    </tr>
+                        <tr>
+                            <th scope="row">{{$engine_auto->id}}</th>
+                            <td>{{$engine_auto->name}}</td>
+                            <td><img src="{{asset('frontend/img/brake.png')}}"
+                                     alt="параметры двигателя {{$engine_auto->id}} и номер" class="img_char"></td>
+                            <td><a href="{{route('index')}}/{{$engine_auto->slug}}" target="_blank">Посмотреть</a></td>
+                        </tr>
                     @endforeach
                     </tbody>
                 </table>
@@ -83,28 +84,28 @@
             </div>
             <div class="col-lg-8">
                 <div class="row">
-                @foreach($img_model_arr as $images)
-                    <div class="col-lg-3">
-                        <img src="{{asset("frontend/img/models/$images")}}" class="img_engine_thumbnail"
-                             alt="Внешний вид и поиск номера модели {{$models_data->name}}">
-                    </div>
-                @endforeach
+                    @foreach($img_model_arr as $images)
+                        <div class="col-lg-3">
+                            <img src="{{asset("frontend/img/models/$images")}}" class="img_engine_thumbnail"
+                                 alt="Внешний вид и поиск номера модели {{$models_data->name}}">
+                        </div>
+                    @endforeach
+                </div>
             </div>
-        </div>
         </div>
     </div>
 </section>
 <section class="characteristic">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center " >
+            <div class="col-lg-12 text-center ">
                 <div class="section-heading">
                     <h2>Где следует искать номер двигателя <em>{{$models_data->name}} в первую очередь</em></h2>
                     <div id="params" class="line-dec"></div>
                 </div>
             </div>
             <div class="col-lg-12">
-                 {!!$models_data->press_release!!}
+                {!!$models_data->press_release!!}
             </div>
         </div>
 
@@ -127,21 +128,21 @@
                 <div class="col-lg-12">
                     <div class="loop owl-carousel">
                         @foreach($random_model as $models)
-                        <div class="item">
-                            <a href="{{route('index')}}/car/{{$models->url}}">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img
-                                            src="{{asset("frontend/img/models/default.jpg")}}"
-                                            alt="">
+                            <div class="item">
+                                <a href="{{route('index')}}/car/{{$models->url}}">
+                                    <div class="portfolio-item">
+                                        <div class="thumb">
+                                            <img
+                                                src="{{asset("frontend/img/models/default.jpg")}}"
+                                                alt="">
+                                        </div>
+                                        <div class="down-content">
+                                            <h4>{{$models->name}}</h4>
+                                            <span>{{$models->updated_at->format('d-m-Y')}}</span>
+                                        </div>
                                     </div>
-                                    <div class="down-content">
-                                        <h4>{{$models->name}}</h4>
-                                        <span>{{$models->updated_at->format('d-m-Y')}}</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
                         @endforeach
 
                     </div>
@@ -154,12 +155,12 @@
 <section id="blog" class="blog">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center" >
+            <div class="col-lg-12 text-center">
                 <div class="section-heading">
                     <h3>Модификации <em>моторов</em></h3>
                 </div>
             </div>
-            <div class="col-lg-6 " >
+            <div class="col-lg-6 ">
                 <div class="blog-post">
                     <div class="thumb">
                         <iframe
@@ -177,7 +178,8 @@
                     <div class="down-content">
                         <span class="category">Видео</span>
                         <h3 id="video">Видео по поиску номера двигателя {{$engine_auto->name}}</h3>
-                        <p>Подробная инструкция по поиску и тому как находить номер для двигателей {{$engine_auto->name}}</p>
+                        <p>Подробная инструкция по поиску и тому как находить номер для
+                            двигателей {{$engine_auto->name}}</p>
                     </div>
                 </div>
             </div>
@@ -185,15 +187,16 @@
                 <div class="blog-posts">
                     <div class="row">
                         @foreach($random_engine as $engines)
-                        <div class="col-lg-12">
-                            <div class="post-item">
-                                <div class="right-content">
-                                    <span class="category">{{$engines->updated_at->format('d-m-Y')}}</span>
-                                    <a href="{{route('index')}}/{{$engines->slug}}"><h4>{{$engines->name}}</h4></a>
-                                    <p>Характеристики и основные модели автомобилей для двигателя {{$engines->name}}</p>
+                            <div class="col-lg-12">
+                                <div class="post-item">
+                                    <div class="right-content">
+                                        <span class="category">{{$engines->updated_at->format('d-m-Y')}}</span>
+                                        <a href="{{route('index')}}/{{$engines->slug}}"><h4>{{$engines->name}}</h4></a>
+                                        <p>Характеристики и основные модели автомобилей для
+                                            двигателя {{$engines->name}}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -204,7 +207,7 @@
 <section class="nomer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center" >
+            <div class="col-lg-12 text-center">
                 <div class="section-heading">
                     <h2 id="nomer">Где расположен <em>номер</em> на двигателе {{$models_data->name}}</h2>
                 </div>
@@ -215,42 +218,17 @@
         </div>
     </div>
 </section>
-<section class="characteristic">
+<section class="characteristic" id="app">
     <div class="container my-5 py-5 text-dark">
         <div class="row d-flex justify-content-center">
             <div class="col-md-12 col-lg-10 col-xl-8 ">
-                <div class="col-lg-12 text-center" >
+                <div class="col-lg-12 text-center">
                     <div class="section-heading">
                         <h4 id="comments">Отзывы владельцев <em>{{$models_data->name}}</em></h4>
                     </div>
                 </div>
                 @foreach($comments as $comment)
-                <div class="card mb-3 col-lg-12">
-                    <div class="card-body">
-                        <div class="col-lg-12 text-center">
-                            <img class="img_char " src="{{asset('frontend/img/comments.png')}}"/>
-                        </div>
-                        <div class="d-flex flex-start">
-                            <div class="w-100">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h5 class="text-primary fw-bold mb-0">
-                                        {{$comment->name}}
-                                        <span class="text-dark ms-2"> {{$comment->comment}}</span>
-                                    </h5>
-                                    <p class="mb-0">{{$comment->updated_at->format('d-m-Y')}}</p>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <p class="small mb-0" style="color: #aaa;">
-                                        <a href="#!" class="link-grey">Ответить</a> •
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                @foreach($comments_parent as $comments_reply)
-                    @if($comments_reply->parent_id == $comment->id)
-                    <div class="card mb-3 col-lg-8 ">
+                    <div class="card mb-3 col-lg-12">
                         <div class="card-body">
                             <div class="col-lg-12 text-center">
                                 <img class="img_char " src="{{asset('frontend/img/comments.png')}}"/>
@@ -259,42 +237,49 @@
                                 <div class="w-100">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <h5 class="text-primary fw-bold mb-0">
-                                            {{$comments_reply->name}}
-                                            <span class="text-dark ms-2"> {{$comments_reply->comment}}</span>
+                                            {{$comment->name}}
+                                            <span class="text-dark ms-2"> {{$comment->comment}}</span>
                                         </h5>
-                                        <p class="mb-0">{{$comments_reply->updated_at->format('d-m-Y')}}</p>
+                                        <p class="mb-0">{{$comment->updated_at->format('d-m-Y')}}</p>
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <p class="small mb-0" style="color: #aaa;">
-                                            <a href="#!" class="link-grey">Ответить</a> •
+                                            <a href="#form"  class="link-grey">Ответить</a> •
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    @foreach($comments_parent as $comments_reply)
+                        @if($comments_reply->parent_id == $comment->id)
+                            <div class="card mb-3 col-lg-8 ">
+                                <div class="card-body">
+                                    <div class="col-lg-12 text-center">
+                                        <img class="img_char " src="{{asset('frontend/img/comments.png')}}"/>
+                                    </div>
+                                    <div class="d-flex flex-start">
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <h5 class="text-primary fw-bold mb-0">
+                                                    {{$comments_reply->name}}
+                                                    <span class="text-dark ms-2"> {{$comments_reply->comment}}</span>
+                                                </h5>
+                                                <p class="mb-0">{{$comments_reply->updated_at->format('d-m-Y')}}</p>
+                                            </div>
+                                            <div id="app">
+                                                <reply-button :url_model="{{$comments_reply->url_model}}" :parent_id="{{$comments_reply->parent_id}}"></reply-button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         @endif
                     @endforeach
                 @endforeach
             </div>
-            <div class="col-lg-12">
-                <form action="/">
-                    @csrf
-                    <div class="form-group">
-                        <label for="exampleFormControlInput2">Имя</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Ваше имя или логин">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="пример - name@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Ваш комментарий</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <input type="submit" value="Отправить на модерацию" class="btn btn-dark mt-4">
-                </form>
-            </div>
+
+
         </div>
 
     </div>
@@ -304,3 +289,5 @@
 </footer>
 </body>
 </html>
+
+
