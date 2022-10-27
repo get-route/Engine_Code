@@ -23,7 +23,7 @@ Route::group(['prefix'=>'boss_panel'],function (){
     Route::patch('/auto/{auto}','App\Http\Controllers\Admin\AutoModelController@update_auto');
     Route::get('/engines','App\Http\Controllers\Admin\EnginesController@data_table');
     Route::patch('/engines/{engines}','App\Http\Controllers\Admin\EnginesController@update_engine');
-
 });
+Route::post('/car/{model}','App\Http\Controllers\ModelController@store');
 
 

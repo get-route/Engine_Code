@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Comments\CommentAll;
 use App\Models\Automobiles;
 use App\Models\Comments;
 use App\Models\Engine;
@@ -45,9 +46,11 @@ class ModelController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CommentAll $request)
     {
-        //
+        //$data = $request->all();
+        $add_comment = Comments::create(['name'=>$request->name,'email'=>$request->email,'comment'=>$request->comment,'url_model'=>$request->url_model,'url_engine'=>$request->url_engine,'parent_id'=>$request->parent_id]);
+        return $add_comment;
     }
 
     /**
