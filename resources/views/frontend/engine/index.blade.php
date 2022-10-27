@@ -191,66 +191,8 @@
     </div>
 </section>
     <section class="characteristic">
-        <div class="container my-5 py-5 text-dark">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-12 col-lg-10 col-xl-8">
-                    <div class="col-lg-12 text-center" >
-                        <div class="section-heading">
-                            <h4 id="comments">Отзывы  о <em>{{$engines_data->name}}</em></h4>
-                        </div>
-                    </div>
-
-                    <div class="card mb-3 col-lg-12">
-
-
-
-                            <div class="card-body">
-                                <div class="col-lg-12 text-center">
-
-                                    <img class="img_char " src="{{asset('frontend/img/comments.png')}}"/>
-
-                                </div>
-                            <div class="d-flex flex-start">
-
-                                <div class="w-100">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h5 class="text-primary fw-bold mb-0">
-                                            Иван Усов,
-                                            <span class="text-dark ms-2"> "Странно, мне этот Ваш движок не показался наилучшим вариантов."</span>
-                                        </h5>
-                                        <p class="mb-0">2 дня назад</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p class="small mb-0" style="color: #aaa;">
-                                            <a href="#!" class="link-grey">Ответить</a> •
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-12">
-                    <form action="/">
-                        @csrf
-                        <div class="form-group">
-                            <label for="exampleFormControlInput2">Имя</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Ваше имя или логин">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Email</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="пример - name@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Ваш комментарий</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                        <input type="submit" value="Отправить на модерацию" class="btn btn-dark mt-4">
-                    </form>
-                </div>
-            </div>
-
+        <div class="container my-5 py-5 text-dark" id="app">
+            <comments-engine :models="{{json_encode($engines_data->name)}}" :comments="{{json_encode($comments)}}" :comparent="{{json_encode($comments_parent)}}" :url="{{json_encode($engines_data->slug)}}" :idmodel="{{json_encode($engines_data->id)}}"></comments-engine>
         </div>
     </section>
 <footer class="footer">

@@ -24,7 +24,7 @@
               <tr :class="displayOn(auto_data.id) ? '' : 'd-none'">
                 <td><input type="text" v-model="id" class="form-control"></td>
                 <td><input type="text" v-model="name" class="form-control"></td>
-                  <td><textarea type="text"  v-model="specs" class="form-control w-100" >{{auto_data.specs}}</textarea></td>
+                  <td><textarea type="text"  v-model="specs" class="form-control w-100" >{{"auto_data.specs"}}</textarea></td>
                 <td><button class="btn-primary" @click="updateEngine(auto_data.id)">Обновить</button></td>
             </tr>
             </template>
@@ -71,6 +71,7 @@
        ,
         mounted() {
         this.AllAuto()
+
             },
        methods: {
            AllAuto(page = 1) {
@@ -91,7 +92,7 @@
                this.edit = id
                this.id = id
                this.name = name
-               this.specs = specs
+               this.specs =JSON.stringify(specs)
                this.automobile_id = automobile_id
 
            },

@@ -23,7 +23,12 @@ Route::group(['prefix'=>'boss_panel'],function (){
     Route::patch('/auto/{auto}','App\Http\Controllers\Admin\AutoModelController@update_auto');
     Route::get('/engines','App\Http\Controllers\Admin\EnginesController@data_table');
     Route::patch('/engines/{engines}','App\Http\Controllers\Admin\EnginesController@update_engine');
+    Route::get('/comment','App\Http\Controllers\Admin\CommentsController@show');
+    Route::patch('/comment/{comment}','App\Http\Controllers\Admin\CommentsController@update_public');
+    Route::delete('/comment/{comment}','App\Http\Controllers\Admin\CommentsController@delete_comment');
+
 });
 Route::post('/car/{model}','App\Http\Controllers\ModelController@store');
+Route::post('/{engine}','App\Http\Controllers\EnginesCategoryController@store');
 
 

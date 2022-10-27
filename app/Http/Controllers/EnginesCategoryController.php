@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Comments\CommentAll;
 use App\Models\Automobiles;
+use App\Models\Comments;
 use App\Models\Engine;
 use Illuminate\Http\Request;
 
@@ -23,7 +25,9 @@ class EnginesCategoryController extends Controller
         $automobiles = $engines_data->automobiles;
         $random_engine = Engine::all()->values('name','slug','updated_at')->random(5);
         $random_model = Automobiles::all()->values('name','url','updated_at','photos')->random(3);
-        return view('frontend.engine.index',compact('engines_data','automobiles','random_engine','random_model'));
+        $comments = Comments::where([['url_engine','=',$engines_data->id],['public','=','yes'],['parent_id','=',NULL]])->get();
+        $comments_parent = Comments::where([['url_engine','=',$engines_data->id],['public','=','yes'],['parent_id','>=',0]])->get();
+        return view('frontend.engine.index',compact('engines_data','automobiles','random_engine','random_model','comments','comments_parent'));
     }
 
     /**
@@ -42,9 +46,11 @@ class EnginesCategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CommentAll $request)
     {
-        //
+        $data = $request->all();
+        $add_comment = Comments::create(['name'=>$request->name,'email'=>$request->email,'comment'=>$request->comment,'url_model'=>$request->url_model,'url_engine'=>$request->url_engine,'parent_id'=>$request->parent_id]);
+        return $add_comment;
     }
 
     /**

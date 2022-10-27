@@ -21,7 +21,7 @@ class AutoModelController extends Controller
 
     public function update_auto(UpdateRequest $request, Automobiles $auto){
         $data = $request->validated();
-        $automob_update = DB::table('automobiles')->where('id',$auto->id)->update($data);
+        $automob_update = DB::table('comments')->where('id',$auto->id)->update(['public'=>$request->public]);
         return $automob_update;
     }
 }
