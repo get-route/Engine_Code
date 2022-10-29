@@ -24,6 +24,9 @@ import CommentsModelController from "./components/frontend/comments/CommentsMode
 import CommentsEngineController from "./components/frontend/comments/CommentsEngineController.vue";
 import ReplyButtonComponent from "./components/frontend/comments/ReplyButtonComponent.vue";
 import CommentComponent from "./components/admin/comments/CommentComponent.vue";
+import SearchEngineComponent from "./components/frontend/search/SearchEngineComponent.vue";
+import SearchModelComponent from "./components/frontend/search/SearchModelComponent.vue";
+import Search from "./components/frontend/search/Search.vue";
 
 
 
@@ -35,6 +38,9 @@ app.component('comments-model',CommentsModelController);
 app.component('comments-engine',CommentsEngineController);
 app.component('reply-button',ReplyButtonComponent);
 app.component('comments-component',CommentComponent)
+app.component('search-engine',SearchEngineComponent)
+app.component('search-model',SearchModelComponent)
+app.component('searcher',Search)
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

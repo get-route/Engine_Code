@@ -28,6 +28,9 @@ Route::group(['prefix'=>'boss_panel'],function (){
     Route::delete('/comment/{comment}','App\Http\Controllers\Admin\CommentsController@delete_comment');
 
 });
+Route::post('/{request_model}','App\Http\Controllers\EngineController@search_model');
+Route::post('/engine/{request_search}','App\Http\Controllers\EngineController@search_engine');
+
 Route::post('/car/{model}','App\Http\Controllers\ModelController@store');
 Route::post('/{engine}','App\Http\Controllers\EnginesCategoryController@store');
 
