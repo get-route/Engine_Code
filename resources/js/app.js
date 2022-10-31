@@ -27,6 +27,7 @@ import CommentComponent from "./components/admin/comments/CommentComponent.vue";
 import SearchEngineComponent from "./components/frontend/search/SearchEngineComponent.vue";
 import SearchModelComponent from "./components/frontend/search/SearchModelComponent.vue";
 import Search from "./components/frontend/search/Search.vue";
+import AdComponent from "./components/admin/ad/AdComponent.vue";
 
 
 
@@ -41,6 +42,7 @@ app.component('comments-component',CommentComponent)
 app.component('search-engine',SearchEngineComponent)
 app.component('search-model',SearchModelComponent)
 app.component('searcher',Search)
+app.component('ad-component',AdComponent)
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

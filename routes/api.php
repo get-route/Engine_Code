@@ -26,6 +26,8 @@ Route::group(['prefix'=>'boss_panel'],function (){
     Route::get('/comment','App\Http\Controllers\Admin\CommentsController@show');
     Route::patch('/comment/{comment}','App\Http\Controllers\Admin\CommentsController@update_public');
     Route::delete('/comment/{comment}','App\Http\Controllers\Admin\CommentsController@delete_comment');
+    Route::patch('/add','App\Http\Controllers\Admin\AdController@update_add');
+    Route::get('/add','App\Http\Controllers\Admin\AdController@get_add');
 
 });
 Route::post('/{request_model}','App\Http\Controllers\EngineController@search_model');

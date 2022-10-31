@@ -1,5 +1,6 @@
 @section('title','Расположение номера двигателя - где искать, как выглядит онлайн')
 @section('description','Сервис поиска номера двигателя для конкретной марки мотора и модели автомобиля. Расшифровка данных по Винкоду и список возможных вариантов нахождения номера для Вашего автомобиля онлайн.')
+@section('block',$advert[0]['block']['block4'])
 @include('frontend.layout.menu')
 @include('frontend.layout.footer')
 @include('frontend.layout.head')

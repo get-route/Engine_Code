@@ -1,5 +1,6 @@
 @section('title',"$models_data->name - где находится номер двигателя, проверка мотора")
 @section('description','Где расположен номер двигателя на '. $models_data->name.'. Как и где найти его на дизеле и бензине. Параметры мотора '. $models_data->name.'. Проверка при постановке на учет по каталожному номеру.')
+@section('block',$advert_models[0]['block']['block4'])
 @include('frontend.layout.menu')
 @include('frontend.layout.footer')
 @include('frontend.layout.head')
@@ -21,6 +22,9 @@
         <div class="row ">
             <div class="col-lg-12 text-center">
                 <h1 class="text-center">Где найти номер двигателя на {{$models_data->name}}</h1>
+                <div class="col-lg-12">
+                    {!!($advert_models[0]['block']['block5'])!!}
+                </div>
                 <hr class="hr-shadow">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -102,6 +106,9 @@
                 <div class="section-heading">
                     <h2>Где следует искать номер двигателя <em>{{$models_data->name}} в первую очередь</em></h2>
                     <div id="params" class="line-dec"></div>
+                    <div class="col-lg-12">
+                        {!!($advert_models[0]['block']['block6'])!!}
+                    </div>
                 </div>
             </div>
             <div class="col-lg-12">
@@ -159,6 +166,9 @@
                 <div class="section-heading">
                     <h3>Модификации <em>моторов</em></h3>
                 </div>
+                <div class="col-lg-12">
+                    {!!($advert_models[0]['block']['block7'])!!}
+                </div>
             </div>
             <div class="col-lg-6 ">
                 <div class="blog-post">
@@ -211,6 +221,9 @@
                 <div class="section-heading">
                     <h2 id="nomer">Где расположен <em>номер</em> на двигателе {{$models_data->name}}</h2>
                 </div>
+                <div class="col-lg-12">
+                    {!!($advert_models[0]['block']['block8'])!!}
+                </div>
             </div>
             <div class="col-lg-12 text-center">
                 {!!$models_data->description!!}
@@ -225,6 +238,8 @@
     </div>
 </section>
 <footer class="footer">
+
+
     @yield('footer')
 </footer>
 </body>

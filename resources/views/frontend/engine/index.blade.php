@@ -1,5 +1,6 @@
 @section('title','Двигатель '.$engines_data->name.' - расположение номера, где смотреть, как выбит, каталожные данные')
 @section('description','Характеристика каталожных данных мотора '.$engines_data->name.'. Где находится номер двигателя '.$engines_data->name.'. Как найти и проверить его онлайн.')
+@section('block',$advert_engine[0]['block']['block4'])
 @include('frontend.layout.menu')
 @include('frontend.layout.footer')
 @include('frontend.layout.head')
@@ -21,6 +22,9 @@
         <div class="row ">
             <div class="col-lg-12 text-center">
                 <h1 class="text-center">Двигатель {{$engines_data->name}} - расположение номера и модель</h1>
+                <div class="col-lg-12">
+                    {!!($advert_engine[0]['block']['block1'])!!}
+                </div>
                 <hr class="hr-shadow">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -80,6 +84,9 @@
             <div class="col-lg-12 text-center " >
                 <div class="section-heading">
                     <h2 id="params">Параметры двигателя <em>{{$engines_data->name}}</em></h2>
+                    <div class="col-lg-12">
+                        {!!($advert_engine[0]['block']['block2'])!!}
+                    </div>
                     <div class="line-dec"></div>
                 </div>
             </div>
@@ -145,6 +152,9 @@
             <div class="col-lg-12 text-center" >
                 <div class="section-heading">
                     <h3>Популярные <em>автомобили</em></h3>
+                    <div class="col-lg-12">
+                        {!!($advert_engine[0]['block']['block3'])!!}
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6 " >

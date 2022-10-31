@@ -13,16 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('adverts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->text('name');
-            $table->text('email');
-            $table->text('comment');
-            $table->integer('url_model')->nullable();
-            $table->integer('url_engine')->nullable();
-            $table->integer('parent_id')->nullable();
-            $table->char('public')->default('no');
+            $table->json('block')->nullable();
         });
     }
 
@@ -33,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('adverts');
     }
 };

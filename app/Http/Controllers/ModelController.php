@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Comments\CommentAll;
+use App\Models\Advert;
 use App\Models\Automobiles;
 use App\Models\Comments;
 use App\Models\Engine;
@@ -27,17 +28,9 @@ class ModelController extends Controller
         $random_model = Automobiles::all()->values('name','url','updated_at','photos')->random(5);
         $comments = Comments::where([['url_model','=',$models_data->id],['public','=','yes'],['parent_id','=',NULL]])->get();
         $comments_parent = Comments::where([['url_model','=',$models_data->id],['public','=','yes'],['parent_id','>=',0]])->get();
-        return view('frontend.model.index',compact('models_data','img_model_arr','engines_model','random_model','random_engine','comments','comments_parent'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $add_blocks = Advert::all('block');
+        $advert_models = json_decode($add_blocks,true);
+        return view('frontend.model.index',compact('models_data','img_model_arr','engines_model','random_model','random_engine','comments','comments_parent','advert_models'));
     }
 
     /**
@@ -53,48 +46,4 @@ class ModelController extends Controller
         return $add_comment;
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

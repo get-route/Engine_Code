@@ -17,6 +17,7 @@ Route::group(['prefix'=>'/boss_panel','middleware'=>'admin'],function (){
     Route::get('/engines','App\Http\Controllers\Admin\EnginesController@index')->name('engines.index');
     Route::get('/auto','App\Http\Controllers\Admin\AutoModelController@index')->name('auto.index');
     Route::get('/comment','App\Http\Controllers\Admin\CommentsController@index')->name('comments.index');
+    Route::get('/ad','App\Http\Controllers\Admin\AdController@index')->name('add.index');
 });
 Route::get('/','App\Http\Controllers\EngineController@index')->name('index');
 Route::get('/{engine}','App\Http\Controllers\EnginesCategoryController@index')->name('engine.index');

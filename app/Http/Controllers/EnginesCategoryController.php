@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Comments\CommentAll;
+use App\Models\Advert;
 use App\Models\Automobiles;
 use App\Models\Comments;
 use App\Models\Engine;
@@ -27,7 +28,9 @@ class EnginesCategoryController extends Controller
         $random_model = Automobiles::all()->values('name','url','updated_at','photos')->random(3);
         $comments = Comments::where([['url_engine','=',$engines_data->id],['public','=','yes'],['parent_id','=',NULL]])->get();
         $comments_parent = Comments::where([['url_engine','=',$engines_data->id],['public','=','yes'],['parent_id','>=',0]])->get();
-        return view('frontend.engine.index',compact('engines_data','automobiles','random_engine','random_model','comments','comments_parent'));
+        $add_blocks = Advert::all('block');
+        $advert_engine = json_decode($add_blocks,true);
+        return view('frontend.engine.index',compact('engines_data','automobiles','random_engine','random_model','comments','comments_parent','advert_engine'));
     }
 
     /**
@@ -51,50 +54,5 @@ class EnginesCategoryController extends Controller
         $data = $request->all();
         $add_comment = Comments::create(['name'=>$request->name,'email'=>$request->email,'comment'=>$request->comment,'url_model'=>$request->url_model,'url_engine'=>$request->url_engine,'parent_id'=>$request->parent_id]);
         return $add_comment;
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }
