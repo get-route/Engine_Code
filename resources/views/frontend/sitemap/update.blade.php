@@ -1,6 +1,6 @@
 @include('admin.layout.footer')
 @include('admin.layout.sidebar')
-@section('title','Админка сайта')
+@section('title','Обновление карты сайта')
 @include('admin.layout.header')
     <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +23,7 @@
             <li class="nav-item">
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
+
         </ul>
 
         <!-- Right navbar links -->
@@ -39,15 +40,17 @@
 
 @yield('sidebar')
 
-    <!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
 
         <!-- Main content -->
         <div class="content">
-            <div class="container-fluid" id="app">
+            <div class="container">
                 <!-- /.row -->
-Тут админка
+               <h1 class="text-center"> Обновление карты сайта</h1>
+            <p>Добавлено моделей авто - {{$count_auto}}
+        </p>
+                <p>Добавлено страниц двигателей - {{$count_engine}}</p>
             </div>
             <!-- /.container-fluid -->
         </div>
@@ -56,7 +59,7 @@
     <!-- /.content-wrapper -->
 
 
-@yield('footer')
+    @yield('footer')
 </div>
 
 </body>
