@@ -96,7 +96,6 @@
         components:moment,
         props:['models','comments','comparent','url','idmodel'],
         mounted() {
-            //this.Test()
 
         },
         methods:{
@@ -114,9 +113,8 @@
                 this.parentsID = parentId
             },
             AddComment:function (idmodel) {
-                axios.post('../../api/'+ this.url,{name:this.name, email:this.email, comment:this.commentsText, parent_id:this.parentsID,url_model:this.url_model,url_engine:idmodel}).then(
+                axios.post('../../api/'+ this.url,{name:this.name, email:this.email, comment:this.commentsText, parent_id:this.parentsID,url_model:this.urlModels,url_engine:idmodel}).then(
                     res=>{
-                        console.log(res)
                         alert('Спасибо за комментарий. Он ушел на модерацию. После проверки, мы его добавим...')
 
                     }

@@ -51,6 +51,7 @@
             <p>Добавлено моделей авто - {{$count_auto}}
         </p>
                 <p>Добавлено страниц двигателей - {{$count_engine}}</p>
+                <p>Посмотреть готовую карту сайта можно сдесь - <a href="{{route('sitemap.index')}}" class="btn btn-dark" target="_blank">Открыть</a></p>
             </div>
             <!-- /.container-fluid -->
         </div>

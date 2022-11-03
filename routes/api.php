@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 //Route::get('/boss_panel','App\Http\Controllers\Admin\AdminIndexController@vue');
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
 Route::group(['prefix'=>'boss_panel'],function (){
     Route::get('/auto','App\Http\Controllers\Admin\AutoModelController@data_auto');
     Route::patch('/auto/{auto}','App\Http\Controllers\Admin\AutoModelController@update_auto');
@@ -30,10 +28,12 @@ Route::group(['prefix'=>'boss_panel'],function (){
     Route::get('/add','App\Http\Controllers\Admin\AdController@get_add');
 
 });
-Route::post('/{request_model}','App\Http\Controllers\EngineController@search_model');
-Route::post('/engine/{request_search}','App\Http\Controllers\EngineController@search_engine');
-
+//Comment-reply controllers
 Route::post('/car/{model}','App\Http\Controllers\ModelController@store');
 Route::post('/{engine}','App\Http\Controllers\EnginesCategoryController@store');
+//LiveSearch
+Route::post('/model/{request_model}','App\Http\Controllers\EngineController@search_model');
+Route::post('/engine/{request_search}','App\Http\Controllers\EngineController@search_engine');
+
 
 

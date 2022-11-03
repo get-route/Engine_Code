@@ -2,6 +2,7 @@
     <!-- Main Footer -->
     <footer class="main-footer">
         <a href="{{route('sitemap.update')}}" class="btn-success btn">Обновить Sitemap</a>
+        <a href="{{route('logout')}}" class="btn btn-dark">Выйти</a>
         <strong>Админка сайта {{route('index')}}</strong>
         <div class="float-right d-none d-sm-inline-block">
             <b>Version</b> 3.2.0

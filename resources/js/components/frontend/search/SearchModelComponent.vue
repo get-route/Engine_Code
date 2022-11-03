@@ -40,7 +40,7 @@
         },
         methods: {
             RequestSearch: function () {
-                axios.post('/public/api/'+this.searchs, {'request_model':this.searchs}).then(res=>{
+                axios.post('/public/api/model/'+this.searchs, {'request_model':this.searchs}).then(res=>{
                     this.result = res.data
                 })
             },

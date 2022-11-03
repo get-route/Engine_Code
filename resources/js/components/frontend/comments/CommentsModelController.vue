@@ -96,15 +96,9 @@
         components:moment,
         props:['models','comments','comparent','url','idmodel'],
         mounted() {
-            //this.Test()
 
         },
         methods:{
-            Test:function () {
-                console.log(this.models);
-                console.log(this.comments);
-                console.log(this.comparent);
-            },
             DataFormat:function (dataNew) {
                 return moment(dataNew).format('L')
             },
@@ -116,7 +110,6 @@
             AddComment:function (idmodel) {
                 axios.post('../../api/car/'+ this.url,{name:this.name, email:this.email, comment:this.commentsText, parent_id:this.parentsID,url_model:idmodel,url_engine:this.urlEngines}).then(
                     res=>{
-                        console.log(res)
                         alert('Спасибо за комментарий. Он ушел на модерацию. После проверки, мы его добавим...')
 
                     }

@@ -1,1 +1,18 @@
+User-agent: Yandex 
+Disallow: /js
+Disallow: /register
+Disallow: /login
 
+Host: https://airall.ru
+
+User-agent: Googlebot 
+Disallow: /js
+Disallow: /register
+Disallow: /login
+
+User-agent: *         
+Disallow: /js
+Disallow: /register
+Disallow: /login
+
+Sitemap: Host: https://airall.ru/sitemap.xml

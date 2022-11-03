@@ -14,7 +14,7 @@
                     <div class="container">
 
                         <div class="row service-menu text-center">
-                            <div class="col-lg-4 service-menu-item" id="flush-headingOne">
+                            <div class="col-lg-6 service-menu-item" id="flush-headingOne">
                                 <button type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseOne" aria-expanded="false"
                                         aria-controls="flush-collapseOne" >
@@ -22,23 +22,13 @@
                                         <h2>По автомобилю</h2></a>
                                 </button>
                             </div>
-                            <div class="col-lg-4 service-menu-item" id="flush-headingTwo">
+                            <div class="col-lg-6 service-menu-item" id="flush-headingTwo">
                                 <button class="collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseTwo" aria-expanded="false"
                                         aria-controls="flush-collapseTwo">
                                     <a href="#model-engine">
                                         <img src="/public/frontend/img/service-icon-04.png" alt="номер двигателя по модели силового агрегата">
                                         <h2>По двигателю</h2>
-                                    </a>
-                                </button>
-                            </div>
-                            <div class="col-lg-4 service-menu-item" id="flush-headingThree">
-                                <button class=" collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                        aria-controls="flush-collapseThree">
-                                    <a href="#vin-code">
-                                        <img src="/public/frontend/img/service-icon-01.png" alt="найти номер двигателя по вин коду авто">
-                                        <h2> По вин коду</h2>
                                     </a>
                                 </button>
                             </div>
@@ -102,32 +92,6 @@
                             </div>
                         </div>
 
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                             aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <div class="accordion-body">
-
-                                    <div class="row">
-                                        <div class="col-lg-6 align-self-center">
-                                            <h3>Укажите ВинКод для проверки</h3>
-                                            <p>Параметры автомобиля также можно узнать по винкоду. Для получения всей имеющейся информации Вам попросту необходимо будет его ввести в соответствующее поле. После распознования будет доступна общирная информация</p>
-                                            <div class="ticks-list"><span><i class="fa fa-check"></i>Страна производства</span>
-                                                <span><i class="fa fa-check"></i> Год выпуска</span> <span><i
-                                                    class="fa fa-check"></i>Каталожная модель</span>
-                                                <span id="vin-code"><i class="fa fa-check"></i>Характеристика автомобиля</span> </div>
-
-
-                                        </div>
-                                        <div class="col-lg-6 align-self-center">
-                                            <div class="right-image">
-                                                <img src="/public/frontend/img/services-image-03.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
 

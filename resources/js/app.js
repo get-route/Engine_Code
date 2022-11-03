@@ -22,7 +22,6 @@ import AutomobilesComponent from "./components/admin/auto/AutomobilesComponent.v
 import LaravelVuePagination from 'laravel-vue-pagination';
 import CommentsModelController from "./components/frontend/comments/CommentsModelController.vue";
 import CommentsEngineController from "./components/frontend/comments/CommentsEngineController.vue";
-import ReplyButtonComponent from "./components/frontend/comments/ReplyButtonComponent.vue";
 import CommentComponent from "./components/admin/comments/CommentComponent.vue";
 import SearchEngineComponent from "./components/frontend/search/SearchEngineComponent.vue";
 import SearchModelComponent from "./components/frontend/search/SearchModelComponent.vue";
@@ -37,7 +36,6 @@ app.component('auto-component', AutomobilesComponent);
 app.component('pagination', LaravelVuePagination);
 app.component('comments-model',CommentsModelController);
 app.component('comments-engine',CommentsEngineController);
-app.component('reply-button',ReplyButtonComponent);
 app.component('comments-component',CommentComponent)
 app.component('search-engine',SearchEngineComponent)
 app.component('search-model',SearchModelComponent)

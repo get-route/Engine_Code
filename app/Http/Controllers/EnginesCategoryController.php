@@ -53,6 +53,6 @@ class EnginesCategoryController extends Controller
     {
         $data = $request->all();
         $add_comment = Comments::create(['name'=>$request->name,'email'=>$request->email,'comment'=>$request->comment,'url_model'=>$request->url_model,'url_engine'=>$request->url_engine,'parent_id'=>$request->parent_id]);
-        return $add_comment;
+        return $data;
     }
 }

@@ -2,10 +2,12 @@
 
 namespace App\Http\Middleware;
 
+use App\Http\Requests\Auth\AuthRequest;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class AdminPanel
+class AdminPanelAuthMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,6 +18,11 @@ class AdminPanel
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        if (Auth::user() && Auth::user()->is_admin){
+            return $next($request);
+        }else{
+            abort(404);
+        }
+
     }
 }
